@@ -177,11 +177,297 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\AppointmentsController.cs" />
+    <Compile Include="Controllers\AppraisalController.cs" />
+    <Compile Include="Controllers\AppraisalItemPhotosController.cs" />
+    <Compile Include="Controllers\AppraisalItemsController.cs" />
+    <Compile Include="Controllers\AppraisalLocationsController.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\CommissionPaidController.cs" />
+    <Compile Include="Controllers\CommissionsPreController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\CustomerContactsController.cs" />
+    <Compile Include="Controllers\CustomerHistoryController.cs" />
+    <Compile Include="Controllers\CustomerNotesController.cs" />
+    <Compile Include="Controllers\CustomersController.cs" />
+    <Compile Include="Controllers\Customers2Controller.cs" />
+    <Compile Include="Controllers\DealLotController.cs" />
+    <Compile Include="Controllers\DealMachineController.cs" />
+    <Compile Include="Controllers\DealsController.cs" />
+    <Compile Include="Controllers\DealsJVPController.cs" />
+    <Compile Include="Controllers\EmployeeMaintController.cs" />
+    <Compile Include="Controllers\ExcelController.cs" />
+    <Compile Include="Controllers\gfaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LeadController.cs" />
+    <Compile Include="Controllers\LeadStepController.cs" />
+    <Compile Include="Controllers\LocationController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\MachineAdvController.cs" />
+    <Compile Include="Controllers\MachineCashController.cs" />
+    <Compile Include="Controllers\MachineController.cs" />
+    <Compile Include="Controllers\MachineCostController.cs" />
+    <Compile Include="Controllers\MachineLocationsController.cs" />
+    <Compile Include="Controllers\MachineManufacturersController.cs" />
+    <Compile Include="Controllers\MachineNotesController.cs" />
+    <Compile Include="Controllers\MachineOffersController.cs" />
+    <Compile Include="Controllers\MachinePhotoController.cs" />
+    <Compile Include="Controllers\MachinePriceHistoryController.cs" />
+    <Compile Include="Controllers\MachineSearchController.cs" />
+    <Compile Include="Controllers\MachineSettlementController.cs" />
+    <Compile Include="Controllers\MachineShippingDimensionsController.cs" />
+    <Compile Include="Controllers\MachineSoldController.cs" />
+    <Compile Include="Controllers\MachineSoldReasonController.cs" />
+    <Compile Include="Controllers\MachineTypesController.cs" />
+    <Compile Include="Controllers\MarketingController.cs" />
+    <Compile Include="Controllers\MTPController.cs" />
+    <Compile Include="Controllers\OneLinersController.cs" />
+    <Compile Include="Controllers\PhotoController.cs" />
+    <Compile Include="Controllers\QuoteController.cs" />
+    <Compile Include="Controllers\RecentsController.cs" />
+    <Compile Include="Controllers\SalesOrderApprovalController.cs" />
+    <Compile Include="Controllers\SalesPlanController.cs" />
+    <Compile Include="Controllers\SpikeLoginController.cs" />
+    <Compile Include="Controllers\TasksController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="DAL\dsAllMachines.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsAllMachines.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\dsAppointments.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsAppointments.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\dsAppraisalItemPhotos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsAppraisalItemPhotos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\dsAppraisalItems.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsAppraisalItems.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\dsAppraisalLocations.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsAppraisalLocations.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\dsAppraisals.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsAppraisals.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\dsCategory.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCategory.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\dsCommissionPaid.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCommissionPaid.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\dsCommissionsPre.cs">
+      <DependentUpon>dsCommissionsPre.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\dsCommissionsPre.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCommissionsPre.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\dsContact.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsContact.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\dsCustomerHistory.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCustomerHistory.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\dsCustomersInfo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCustomersInfo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\dsCustomersInfo2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCustomersInfo2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\dsDeals.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsDeals.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\dsEmployeeMaint.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsEmployeeMaint.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\dsLead.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsLead.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\dsLocation.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsLocation.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\dsMachine.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsMachine.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\dsMachineCash.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsMachineCash.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\dsMachineCost.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsMachineCost.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\dsMachineInfo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsMachineInfo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\dsMachineLocations.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsMachineLocations.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\dsMachineManufacturers.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsMachineManufacturers.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\dsMachinePhotos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsMachinePhotos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\dsMachineSettlement.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsMachineSettlement.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\dsMachineShippingDimensions.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsMachineShippingDimensions.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\dsMachineSoldReasons.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsMachineSoldReasons.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\dsMachineTypes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsMachineTypes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\dsMarketing.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsMarketing.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\dsMTP.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsMTP.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\dsOneLinersInfo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsOneLinersInfo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\dsPriceHistory.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsPriceHistory.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\dsRecents.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsRecents.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\dsSalesPlan.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsSalesPlan.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\dsSpikeLogin.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsSpikeLogin.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\dsTasks.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsTasks.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\dsUser.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsUser.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AppointmentsInfo.cs" />
+    <Compile Include="Models\AppraisalInfo.cs" />
+    <Compile Include="Models\AppraisalItemPhotosInfo.cs" />
+    <Compile Include="Models\AppraisalItemsInfo.cs" />
+    <Compile Include="Models\AppraisalLocationsInfo.cs" />
+    <Compile Include="Models\CategoryInfo.cs" />
+    <Compile Include="Models\CommissionPaid.cs" />
+    <Compile Include="Models\CommissionsPreInfo.cs" />
+    <Compile Include="Models\ContactInfo.cs" />
+    <Compile Include="Models\CustomerContactsInfo.cs" />
+    <Compile Include="Models\CustomerHistoryInfo.cs" />
+    <Compile Include="Models\CustomerNotes.cs" />
+    <Compile Include="Models\CustomersInfo2.cs" />
+    <Compile Include="Models\CustomersInfo.cs" />
+    <Compile Include="Models\DealLot.cs" />
+    <Compile Include="Models\DealMachine.cs" />
+    <Compile Include="Models\DealsInfo.cs" />
+    <Compile Include="Models\DealsJvp.cs" />
+    <Compile Include="Models\EmployeeMaintInfo.cs" />
+    <Compile Include="Models\ExcelSend.cs" />
+    <Compile Include="Models\LeadInfo.cs" />
+    <Compile Include="Models\LeadStep.cs" />
+    <Compile Include="Models\LocationInfo.cs" />
+    <Compile Include="Models\MachineAdvertised.cs" />
+    <Compile Include="Models\MachineCash.cs" />
+    <Compile Include="Models\MachineCost.cs" />
+    <Compile Include="Models\MachineInfo.cs" />
+    <Compile Include="Models\MachineLocation.cs" />
+    <Compile Include="Models\MachineManufacturer.cs" />
+    <Compile Include="Models\MachineNotes.cs" />
+    <Compile Include="Models\MachineOffers.cs" />
+    <Compile Include="Models\MachinePhotosInfo.cs" />
+    <Compile Include="Models\MachineSettlement.cs" />
+    <Compile Include="Models\MachineShippingDimensions.cs" />
+    <Compile Include="Models\MachineSoldReason.cs" />
+    <Compile Include="Models\MarketingInfo.cs" />
+    <Compile Include="Models\Message.cs" />
+    <Compile Include="Models\MTPinfo.cs" />
+    <Compile Include="Models\OneLinersInfo.cs" />
+    <Compile Include="Models\Pricehistory.cs" />
+    <Compile Include="Models\QuoteSend.cs" />
+    <Compile Include="Models\RecentsInfo.cs" />
+    <Compile Include="Models\SalesOrderApproval.cs" />
+    <Compile Include="Models\SalesPlan.cs" />
+    <Compile Include="Models\SpikeLoginInfo.cs" />
+    <Compile Include="Models\TaskInfo.cs" />
+    <Compile Include="Models\UserInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -215,6 +501,414 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="DAL\dsMachine.xsc">
+      <DependentUpon>dsMachine.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\dsCategory.xsc">
+      <DependentUpon>dsCategory.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\dsAppointments.xsc">
+      <DependentUpon>dsAppointments.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\dsAllMachines.xsc">
+      <DependentUpon>dsAllMachines.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\dsAllMachines.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsAllMachines.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DAL\dsAllMachines.xss">
+      <DependentUpon>dsAllMachines.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\dsAppointments.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsAppointments.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="DAL\dsAppointments.xss">
+      <DependentUpon>dsAppointments.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\dsAppraisals.xsc">
+      <DependentUpon>dsAppraisals.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\dsAppraisalLocations.xsc">
+      <DependentUpon>dsAppraisalLocations.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\dsAppraisalItems.xsc">
+      <DependentUpon>dsAppraisalItems.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\dsAppraisalItemPhotos.xsc">
+      <DependentUpon>dsAppraisalItemPhotos.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\dsAppraisalItemPhotos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsAppraisalItemPhotos.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DAL\dsAppraisalItemPhotos.xss">
+      <DependentUpon>dsAppraisalItemPhotos.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\dsAppraisalItems.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsAppraisalItems.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DAL\dsAppraisalItems.xss">
+      <DependentUpon>dsAppraisalItems.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\dsAppraisalLocations.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsAppraisalLocations.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DAL\dsAppraisalLocations.xss">
+      <DependentUpon>dsAppraisalLocations.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\dsAppraisals.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsAppraisals.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DAL\dsAppraisals.xss">
+      <DependentUpon>dsAppraisals.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\dsCategory.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCategory.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DAL\dsCategory.xss">
+      <DependentUpon>dsCategory.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\dsCustomersInfo.xsc">
+      <DependentUpon>dsCustomersInfo.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\dsContact.xsc">
+      <DependentUpon>dsContact.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\dsCommissionPaid.xsc">
+      <DependentUpon>dsCommissionPaid.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\dsCommissionPaid.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCommissionPaid.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DAL\dsCommissionPaid.xss">
+      <DependentUpon>dsCommissionPaid.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\dsCommissionsPre.xsc">
+      <DependentUpon>dsCommissionsPre.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\dsCommissionsPre.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCommissionsPre.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DAL\dsCommissionsPre.xss">
+      <DependentUpon>dsCommissionsPre.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\dsContact.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsContact.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DAL\dsContact.xss">
+      <DependentUpon>dsContact.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\dsCustomerHistory.xsc">
+      <DependentUpon>dsCustomerHistory.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\dsCustomerHistory.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCustomerHistory.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DAL\dsCustomerHistory.xss">
+      <DependentUpon>dsCustomerHistory.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\dsCustomersInfo.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCustomersInfo.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DAL\dsCustomersInfo.xss">
+      <DependentUpon>dsCustomersInfo.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\dsCustomersInfo2.xsc">
+      <DependentUpon>dsCustomersInfo2.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\dsCustomersInfo2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCustomersInfo2.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DAL\dsCustomersInfo2.xss">
+      <DependentUpon>dsCustomersInfo2.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\dsDeals.xsc">
+      <DependentUpon>dsDeals.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\dsDeals.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsDeals.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DAL\dsDeals.xss">
+      <DependentUpon>dsDeals.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\dsLead.xsc">
+      <DependentUpon>dsLead.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\dsEmployeeMaint.xsc">
+      <DependentUpon>dsEmployeeMaint.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\dsEmployeeMaint.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsEmployeeMaint.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DAL\dsEmployeeMaint.xss">
+      <DependentUpon>dsEmployeeMaint.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\dsLead.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsLead.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DAL\dsLead.xss">
+      <DependentUpon>dsLead.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\dsLocation.xsc">
+      <DependentUpon>dsLocation.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\dsLocation.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsLocation.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DAL\dsLocation.xss">
+      <DependentUpon>dsLocation.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\dsMachine.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsMachine.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DAL\dsMachine.xss">
+      <DependentUpon>dsMachine.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\dsUser.xsc">
+      <DependentUpon>dsUser.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\dsMachineTypes.xsc">
+      <DependentUpon>dsMachineTypes.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\dsMachinePhotos.xsc">
+      <DependentUpon>dsMachinePhotos.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\dsMachineLocations.xsc">
+      <DependentUpon>dsMachineLocations.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\dsMachineInfo.xsc">
+      <DependentUpon>dsMachineInfo.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\dsMachineCost.xsc">
+      <DependentUpon>dsMachineCost.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\dsMachineCash.xsc">
+      <DependentUpon>dsMachineCash.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\dsMachineCash.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsMachineCash.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DAL\dsMachineCash.xss">
+      <DependentUpon>dsMachineCash.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\dsMachineCost.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsMachineCost.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DAL\dsMachineCost.xss">
+      <DependentUpon>dsMachineCost.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\dsMachineInfo.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsMachineInfo.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DAL\dsMachineInfo.xss">
+      <DependentUpon>dsMachineInfo.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\dsMachineLocations.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsMachineLocations.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DAL\dsMachineLocations.xss">
+      <DependentUpon>dsMachineLocations.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\dsMachineManufacturers.xsc">
+      <DependentUpon>dsMachineManufacturers.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\dsMachineManufacturers.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsMachineManufacturers.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DAL\dsMachineManufacturers.xss">
+      <DependentUpon>dsMachineManufacturers.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\dsMachinePhotos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsMachinePhotos.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DAL\dsMachinePhotos.xss">
+      <DependentUpon>dsMachinePhotos.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\dsMachineShippingDimensions.xsc">
+      <DependentUpon>dsMachineShippingDimensions.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\dsMachineSettlement.xsc">
+      <DependentUpon>dsMachineSettlement.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\dsMachineSettlement.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsMachineSettlement.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DAL\dsMachineSettlement.xss">
+      <DependentUpon>dsMachineSettlement.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\dsMachineShippingDimensions.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsMachineShippingDimensions.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DAL\dsMachineShippingDimensions.xss">
+      <DependentUpon>dsMachineShippingDimensions.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\dsMachineSoldReasons.xsc">
+      <DependentUpon>dsMachineSoldReasons.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\dsMachineSoldReasons.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsMachineSoldReasons.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DAL\dsMachineSoldReasons.xss">
+      <DependentUpon>dsMachineSoldReasons.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\dsMachineTypes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsMachineTypes.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DAL\dsMachineTypes.xss">
+      <DependentUpon>dsMachineTypes.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\dsOneLinersInfo.xsc">
+      <DependentUpon>dsOneLinersInfo.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\dsMarketing.xsc">
+      <DependentUpon>dsMarketing.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\dsMarketing.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsMarketing.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DAL\dsMarketing.xss">
+      <DependentUpon>dsMarketing.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\dsMTP.xsc">
+      <DependentUpon>dsMTP.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\dsMTP.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsMTP.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DAL\dsMTP.xss">
+      <DependentUpon>dsMTP.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\dsOneLinersInfo.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsOneLinersInfo.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DAL\dsOneLinersInfo.xss">
+      <DependentUpon>dsOneLinersInfo.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\dsRecents.xsc">
+      <DependentUpon>dsRecents.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\dsPriceHistory.xsc">
+      <DependentUpon>dsPriceHistory.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\dsPriceHistory.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsPriceHistory.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DAL\dsPriceHistory.xss">
+      <DependentUpon>dsPriceHistory.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\dsRecents.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsRecents.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DAL\dsRecents.xss">
+      <DependentUpon>dsRecents.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\dsSpikeLogin.xsc">
+      <DependentUpon>dsSpikeLogin.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\dsSalesPlan.xsc">
+      <DependentUpon>dsSalesPlan.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\dsSalesPlan.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsSalesPlan.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DAL\dsSalesPlan.xss">
+      <DependentUpon>dsSalesPlan.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\dsSpikeLogin.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsSpikeLogin.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DAL\dsSpikeLogin.xss">
+      <DependentUpon>dsSpikeLogin.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\dsTasks.xsc">
+      <DependentUpon>dsTasks.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\dsTasks.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsTasks.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DAL\dsTasks.xss">
+      <DependentUpon>dsTasks.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\dsUser.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsUser.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DAL\dsUser.xss">
+      <DependentUpon>dsUser.xsd</DependentUpon>
+    </Content>
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -238,7 +932,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
