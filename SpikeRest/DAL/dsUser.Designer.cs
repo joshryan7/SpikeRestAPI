@@ -289,6 +289,16 @@ namespace SpikeRest.DAL {
             
             private global::System.Data.DataColumn columnaddamachine;
             
+            private global::System.Data.DataColumn columnpwd;
+            
+            private global::System.Data.DataColumn columnphone;
+            
+            private global::System.Data.DataColumn columnusername;
+            
+            private global::System.Data.DataColumn columnworkaddress;
+            
+            private global::System.Data.DataColumn columnlastinvno;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public UsersSAMSelectLoginDataTable() {
@@ -364,6 +374,46 @@ namespace SpikeRest.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn pwdColumn {
+                get {
+                    return this.columnpwd;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn phoneColumn {
+                get {
+                    return this.columnphone;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn usernameColumn {
+                get {
+                    return this.columnusername;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn workaddressColumn {
+                get {
+                    return this.columnworkaddress;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn lastinvnoColumn {
+                get {
+                    return this.columnlastinvno;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -399,14 +449,19 @@ namespace SpikeRest.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public UsersSAMSelectLoginRow AddUsersSAMSelectLoginRow(int vendorid, string firstname, string lastname, string useremail, bool addamachine) {
+            public UsersSAMSelectLoginRow AddUsersSAMSelectLoginRow(int vendorid, string firstname, string lastname, string useremail, bool addamachine, string pwd, string phone, string username, string workaddress, string lastinvno) {
                 UsersSAMSelectLoginRow rowUsersSAMSelectLoginRow = ((UsersSAMSelectLoginRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         vendorid,
                         firstname,
                         lastname,
                         useremail,
-                        addamachine};
+                        addamachine,
+                        pwd,
+                        phone,
+                        username,
+                        workaddress,
+                        lastinvno};
                 rowUsersSAMSelectLoginRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowUsersSAMSelectLoginRow);
                 return rowUsersSAMSelectLoginRow;
@@ -434,6 +489,11 @@ namespace SpikeRest.DAL {
                 this.columnlastname = base.Columns["lastname"];
                 this.columnuseremail = base.Columns["useremail"];
                 this.columnaddamachine = base.Columns["addamachine"];
+                this.columnpwd = base.Columns["pwd"];
+                this.columnphone = base.Columns["phone"];
+                this.columnusername = base.Columns["username"];
+                this.columnworkaddress = base.Columns["workaddress"];
+                this.columnlastinvno = base.Columns["lastinvno"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -449,6 +509,16 @@ namespace SpikeRest.DAL {
                 base.Columns.Add(this.columnuseremail);
                 this.columnaddamachine = new global::System.Data.DataColumn("addamachine", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnaddamachine);
+                this.columnpwd = new global::System.Data.DataColumn("pwd", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpwd);
+                this.columnphone = new global::System.Data.DataColumn("phone", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnphone);
+                this.columnusername = new global::System.Data.DataColumn("username", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnusername);
+                this.columnworkaddress = new global::System.Data.DataColumn("workaddress", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnworkaddress);
+                this.columnlastinvno = new global::System.Data.DataColumn("lastinvno", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnlastinvno);
                 this.columnvendorid.AllowDBNull = false;
                 this.columnfirstname.MaxLength = 50;
                 this.columnlastname.MaxLength = 50;
@@ -670,6 +740,86 @@ namespace SpikeRest.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string pwd {
+                get {
+                    if (this.IspwdNull()) {
+                        return string.Empty;
+                    }
+                    else {
+                        return ((string)(this[this.tableUsersSAMSelectLogin.pwdColumn]));
+                    }
+                }
+                set {
+                    this[this.tableUsersSAMSelectLogin.pwdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string phone {
+                get {
+                    if (this.IsphoneNull()) {
+                        return string.Empty;
+                    }
+                    else {
+                        return ((string)(this[this.tableUsersSAMSelectLogin.phoneColumn]));
+                    }
+                }
+                set {
+                    this[this.tableUsersSAMSelectLogin.phoneColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string username {
+                get {
+                    if (this.IsusernameNull()) {
+                        return string.Empty;
+                    }
+                    else {
+                        return ((string)(this[this.tableUsersSAMSelectLogin.usernameColumn]));
+                    }
+                }
+                set {
+                    this[this.tableUsersSAMSelectLogin.usernameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string workaddress {
+                get {
+                    if (this.IsworkaddressNull()) {
+                        return string.Empty;
+                    }
+                    else {
+                        return ((string)(this[this.tableUsersSAMSelectLogin.workaddressColumn]));
+                    }
+                }
+                set {
+                    this[this.tableUsersSAMSelectLogin.workaddressColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string lastinvno {
+                get {
+                    if (this.IslastinvnoNull()) {
+                        return string.Empty;
+                    }
+                    else {
+                        return ((string)(this[this.tableUsersSAMSelectLogin.lastinvnoColumn]));
+                    }
+                }
+                set {
+                    this[this.tableUsersSAMSelectLogin.lastinvnoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsfirstnameNull() {
                 return this.IsNull(this.tableUsersSAMSelectLogin.firstnameColumn);
             }
@@ -714,6 +864,66 @@ namespace SpikeRest.DAL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetaddamachineNull() {
                 this[this.tableUsersSAMSelectLogin.addamachineColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IspwdNull() {
+                return this.IsNull(this.tableUsersSAMSelectLogin.pwdColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetpwdNull() {
+                this[this.tableUsersSAMSelectLogin.pwdColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsphoneNull() {
+                return this.IsNull(this.tableUsersSAMSelectLogin.phoneColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetphoneNull() {
+                this[this.tableUsersSAMSelectLogin.phoneColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsusernameNull() {
+                return this.IsNull(this.tableUsersSAMSelectLogin.usernameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetusernameNull() {
+                this[this.tableUsersSAMSelectLogin.usernameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsworkaddressNull() {
+                return this.IsNull(this.tableUsersSAMSelectLogin.workaddressColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetworkaddressNull() {
+                this[this.tableUsersSAMSelectLogin.workaddressColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IslastinvnoNull() {
+                return this.IsNull(this.tableUsersSAMSelectLogin.lastinvnoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetlastinvnoNull() {
+                this[this.tableUsersSAMSelectLogin.lastinvnoColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -881,6 +1091,11 @@ namespace SpikeRest.DAL.dsUserTableAdapters {
             tableMapping.ColumnMappings.Add("lastname", "lastname");
             tableMapping.ColumnMappings.Add("useremail", "useremail");
             tableMapping.ColumnMappings.Add("addamachine", "addamachine");
+            tableMapping.ColumnMappings.Add("pwd", "pwd");
+            tableMapping.ColumnMappings.Add("phone", "phone");
+            tableMapping.ColumnMappings.Add("username", "username");
+            tableMapping.ColumnMappings.Add("workaddress", "workaddress");
+            tableMapping.ColumnMappings.Add("lastinvno", "lastinvno");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -894,14 +1109,27 @@ namespace SpikeRest.DAL.dsUserTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "dbo.UsersSAMSelectLogin";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@username", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@password", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@username", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@password", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "dbo.UsersSAMSelectValidateCode";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@useremail", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@validationcode", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "dbo.UsersSAMSelectValidateUsername";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@useremail", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -946,6 +1174,90 @@ namespace SpikeRest.DAL.dsUserTableAdapters {
             }
             else {
                 this.Adapter.SelectCommand.Parameters[2].Value = ((string)(password));
+            }
+            dsUser.UsersSAMSelectLoginDataTable dataTable = new dsUser.UsersSAMSelectLoginDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByCode(dsUser.UsersSAMSelectLoginDataTable dataTable, string useremail, string validationcode) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((useremail == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(useremail));
+            }
+            if ((validationcode == null)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(validationcode));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual dsUser.UsersSAMSelectLoginDataTable GetDataByCode(string useremail, string validationcode) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((useremail == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(useremail));
+            }
+            if ((validationcode == null)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(validationcode));
+            }
+            dsUser.UsersSAMSelectLoginDataTable dataTable = new dsUser.UsersSAMSelectLoginDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByUsername(dsUser.UsersSAMSelectLoginDataTable dataTable, string useremail) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((useremail == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(useremail));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual dsUser.UsersSAMSelectLoginDataTable GetDataByUsername(string useremail) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((useremail == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(useremail));
             }
             dsUser.UsersSAMSelectLoginDataTable dataTable = new dsUser.UsersSAMSelectLoginDataTable();
             this.Adapter.Fill(dataTable);

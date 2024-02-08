@@ -42,7 +42,7 @@ namespace SpikeRest.Controllers
                     s.SamJvp = dt[i].sam_jvp;
                     s.Jvpdescription = dt[i].jvpdescription.Trim();
                     s.Serial = dt[i].serial;
-                    s.Jvpinvno = dt[i].jvpinvno;
+                    s.Jvpinvno = dt[i].jvpinvno.Trim();
                     s.Machinedescription = dt[i].machinedescription.Trim();
 
                     //Alphabetical here down

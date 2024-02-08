@@ -63,10 +63,10 @@ namespace SpikeRest.Controllers
             {
                 MachineInfo i = new MachineInfo();               
                 i.Invno = dt[x].productid;
-                i.Description = dt[x].ItemName;
+                i.Description = dt[x].ItemName.Trim();
                 i.Year = dt[x].year;
                 i.ImageMain = dt[x].ItemImageName;
-                i.Jvpinvno = dt[x].jvpinvno;
+                i.Jvpinvno = dt[x].jvpinvno.Trim();
                 x++;
 
                 machineList.Add(i);

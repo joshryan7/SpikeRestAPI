@@ -158,8 +158,8 @@ namespace SpikeRest.Models
         [DataMember(Name = "signorid")]
         public string Signorid { get; set; }
 
-        [DataMember(Name = "signor")]
-        public string Signor { get; set; }
+        [DataMember(Name = "signorname")]
+        public string Signorname { get; set; }
 
         [DataMember(Name = "leadtype")]
         public string Leadtype { get; set; }

@@ -19,7 +19,25 @@ namespace SpikeRest.Models
             [DataMember(Name = "lastname")]
             public string LastName { get; set; }
 
-       
+            [DataMember(Name = "username")]
+            public string Username { get; set; }
+
+            [DataMember(Name = "email")]
+            public string Email { get; set; }
+
+            [DataMember(Name = "phone")]
+            public string Phone { get; set; }
+
+            [DataMember(Name = "workaddress")]
+            public string Workaddress { get; set; }
+
+            [DataMember(Name = "lastinvno")]
+            public string Lastinvno { get; set; }
+
+            [DataMember(Name = "addanasset")]
+            public string Addanasset { get; set; }
+
+
     }
   
 }

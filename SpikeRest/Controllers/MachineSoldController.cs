@@ -31,7 +31,7 @@ namespace SpikeRest.Controllers
             dsMachine.GetUsedInventoryItem_MobileDataTable dtInv = new dsMachine.GetUsedInventoryItem_MobileDataTable();
             SpikeRest.DAL.dsMachineTableAdapters.GetUsedInventoryItem_MobileTableAdapter taInv = new DAL.dsMachineTableAdapters.GetUsedInventoryItem_MobileTableAdapter();
             
-            dtInv = taInv.GetDataByInvno(invno, -1);
+            dtInv = taInv.GetDataByInvno(invno, -1, "");
 
 
             if (dtInv[0].MachinePricingType.ToUpper() == "CONSIGNMENT" ||

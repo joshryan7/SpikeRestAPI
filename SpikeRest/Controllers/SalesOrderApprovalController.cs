@@ -29,7 +29,7 @@ namespace SpikeRest.Controllers
 
             bool bapprove = true;
 
-            if (approve.ToUpper() == "false")
+            if (approve.ToUpper() == "false" || approve == "0")
             {
                 bapprove = false;
             }

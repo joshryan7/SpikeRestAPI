@@ -263,14 +263,19 @@ namespace SpikeRest.Controllers
 
             try
             {
-                System.IO.Directory.CreateDirectory(@"D:\ApprPics\Project" + newProjectId.ToString());
+                System.IO.Directory.CreateDirectory(@"D:\Web2\ApprPics\Project" + newProjectId.ToString());
             }
             catch
-            { }
+            {
+                
+            }
 
             cmd.Dispose();
             cn.Close();
             cn.Dispose();
+
+
+
             return new AppraisalInfo
             {
                 Id = newProjectId.ToString(),

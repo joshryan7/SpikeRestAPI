@@ -4417,6 +4417,28 @@ namespace SpikeRest.DAL {
             
             private global::System.Data.DataColumn columnsignorid;
             
+            private global::System.Data.DataColumn columneuros;
+            
+            private global::System.Data.DataColumn columnretail;
+            
+            private global::System.Data.DataColumn columnlength1;
+            
+            private global::System.Data.DataColumn columnwidth1;
+            
+            private global::System.Data.DataColumn columnheight1;
+            
+            private global::System.Data.DataColumn columnapprox_wt1;
+            
+            private global::System.Data.DataColumn columnSqft;
+            
+            private global::System.Data.DataColumn columnresponsibleSalesmanId;
+            
+            private global::System.Data.DataColumn columntransferamount1;
+            
+            private global::System.Data.DataColumn columnremovalamount1;
+            
+            private global::System.Data.DataColumn columntransferassets1;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public GetUsedInventoryItem_MobileDataTable() {
@@ -5052,6 +5074,94 @@ namespace SpikeRest.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn eurosColumn {
+                get {
+                    return this.columneuros;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn retailColumn {
+                get {
+                    return this.columnretail;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn length1Column {
+                get {
+                    return this.columnlength1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn width1Column {
+                get {
+                    return this.columnwidth1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn height1Column {
+                get {
+                    return this.columnheight1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn approx_wt1Column {
+                get {
+                    return this.columnapprox_wt1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn SqftColumn {
+                get {
+                    return this.columnSqft;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn responsibleSalesmanIdColumn {
+                get {
+                    return this.columnresponsibleSalesmanId;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn transferamount1Column {
+                get {
+                    return this.columntransferamount1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn removalamount1Column {
+                get {
+                    return this.columnremovalamount1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn transferassets1Column {
+                get {
+                    return this.columntransferassets1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -5162,7 +5272,18 @@ namespace SpikeRest.DAL {
                         string assetcontactemail, 
                         string assetcontactphone, 
                         string transferassets, 
-                        int signorid) {
+                        int signorid, 
+                        bool euros, 
+                        float retail1, 
+                        float length1, 
+                        float width1, 
+                        float height1, 
+                        float approx_wt1, 
+                        float Sqft1, 
+                        int responsibleSalesmanId1, 
+                        decimal transferamount1, 
+                        decimal removalamount1, 
+                        int transferassets1) {
                 GetUsedInventoryItem_MobileRow rowGetUsedInventoryItem_MobileRow = ((GetUsedInventoryItem_MobileRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         invno,
@@ -5239,7 +5360,18 @@ namespace SpikeRest.DAL {
                         assetcontactemail,
                         assetcontactphone,
                         transferassets,
-                        signorid};
+                        signorid,
+                        euros,
+                        retail1,
+                        length1,
+                        width1,
+                        height1,
+                        approx_wt1,
+                        Sqft1,
+                        responsibleSalesmanId1,
+                        transferamount1,
+                        removalamount1,
+                        transferassets1};
                 rowGetUsedInventoryItem_MobileRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowGetUsedInventoryItem_MobileRow);
                 return rowGetUsedInventoryItem_MobileRow;
@@ -5337,6 +5469,17 @@ namespace SpikeRest.DAL {
                 this.columnassetcontactphone = base.Columns["assetcontactphone"];
                 this.columntransferassets = base.Columns["transferassets"];
                 this.columnsignorid = base.Columns["signorid"];
+                this.columneuros = base.Columns["euros"];
+                this.columnretail = base.Columns["retail"];
+                this.columnlength1 = base.Columns["length1"];
+                this.columnwidth1 = base.Columns["width1"];
+                this.columnheight1 = base.Columns["height1"];
+                this.columnapprox_wt1 = base.Columns["approx_wt1"];
+                this.columnSqft = base.Columns["Sqft"];
+                this.columnresponsibleSalesmanId = base.Columns["responsibleSalesmanId"];
+                this.columntransferamount1 = base.Columns["transferamount1"];
+                this.columnremovalamount1 = base.Columns["removalamount1"];
+                this.columntransferassets1 = base.Columns["transferassets1"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5492,6 +5635,28 @@ namespace SpikeRest.DAL {
                 base.Columns.Add(this.columntransferassets);
                 this.columnsignorid = new global::System.Data.DataColumn("signorid", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnsignorid);
+                this.columneuros = new global::System.Data.DataColumn("euros", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columneuros);
+                this.columnretail = new global::System.Data.DataColumn("retail", typeof(float), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnretail);
+                this.columnlength1 = new global::System.Data.DataColumn("length1", typeof(float), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnlength1);
+                this.columnwidth1 = new global::System.Data.DataColumn("width1", typeof(float), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnwidth1);
+                this.columnheight1 = new global::System.Data.DataColumn("height1", typeof(float), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnheight1);
+                this.columnapprox_wt1 = new global::System.Data.DataColumn("approx_wt1", typeof(float), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnapprox_wt1);
+                this.columnSqft = new global::System.Data.DataColumn("Sqft", typeof(float), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSqft);
+                this.columnresponsibleSalesmanId = new global::System.Data.DataColumn("responsibleSalesmanId", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnresponsibleSalesmanId);
+                this.columntransferamount1 = new global::System.Data.DataColumn("transferamount1", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntransferamount1);
+                this.columnremovalamount1 = new global::System.Data.DataColumn("removalamount1", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnremovalamount1);
+                this.columntransferassets1 = new global::System.Data.DataColumn("transferassets1", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntransferassets1);
                 this.columninvno.Caption = "productid";
                 this.columninvno.MaxLength = 10;
                 this.columnItemName.ReadOnly = true;
@@ -5553,6 +5718,24 @@ namespace SpikeRest.DAL {
                 this.columnTagAmount.DefaultValue = ((string)(""));
                 this.columnTagcomment.ReadOnly = true;
                 this.columnTagcomment.MaxLength = 3001;
+                this.columneuros.DefaultValue = ((bool)(false));
+                this.columnretail.ReadOnly = true;
+                this.columnlength1.ReadOnly = true;
+                this.columnlength1.Caption = "length";
+                this.columnwidth1.ReadOnly = true;
+                this.columnwidth1.Caption = "width";
+                this.columnheight1.ReadOnly = true;
+                this.columnheight1.Caption = "height";
+                this.columnapprox_wt1.ReadOnly = true;
+                this.columnapprox_wt1.Caption = "approx_wt";
+                this.columnSqft.ReadOnly = true;
+                this.columnresponsibleSalesmanId.ReadOnly = true;
+                this.columntransferamount1.ReadOnly = true;
+                this.columntransferamount1.Caption = "transferamount";
+                this.columnremovalamount1.ReadOnly = true;
+                this.columnremovalamount1.Caption = "removalamount";
+                this.columntransferassets1.ReadOnly = true;
+                this.columntransferassets1.Caption = "transferassets";
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13337,6 +13520,187 @@ namespace SpikeRest.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool euros {
+                get {
+                    try {
+                        return ((bool)(this[this.tableGetUsedInventoryItem_Mobile.eurosColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'euros\' in table \'GetUsedInventoryItem_Mobile\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGetUsedInventoryItem_Mobile.eurosColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public float retail {
+                get {
+                    try {
+                        return ((float)(this[this.tableGetUsedInventoryItem_Mobile.retailColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'retail\' in table \'GetUsedInventoryItem_Mobile\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGetUsedInventoryItem_Mobile.retailColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public float length1 {
+                get {
+                    try {
+                        return ((float)(this[this.tableGetUsedInventoryItem_Mobile.length1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'length1\' in table \'GetUsedInventoryItem_Mobile\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGetUsedInventoryItem_Mobile.length1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public float width1 {
+                get {
+                    try {
+                        return ((float)(this[this.tableGetUsedInventoryItem_Mobile.width1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'width1\' in table \'GetUsedInventoryItem_Mobile\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGetUsedInventoryItem_Mobile.width1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public float height1 {
+                get {
+                    try {
+                        return ((float)(this[this.tableGetUsedInventoryItem_Mobile.height1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'height1\' in table \'GetUsedInventoryItem_Mobile\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGetUsedInventoryItem_Mobile.height1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public float approx_wt1 {
+                get {
+                    try {
+                        return ((float)(this[this.tableGetUsedInventoryItem_Mobile.approx_wt1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'approx_wt1\' in table \'GetUsedInventoryItem_Mobile\' is DBNul" +
+                                "l.", e);
+                    }
+                }
+                set {
+                    this[this.tableGetUsedInventoryItem_Mobile.approx_wt1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public float Sqft {
+                get {
+                    try {
+                        return ((float)(this[this.tableGetUsedInventoryItem_Mobile.SqftColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Sqft\' in table \'GetUsedInventoryItem_Mobile\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGetUsedInventoryItem_Mobile.SqftColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int responsibleSalesmanId {
+                get {
+                    try {
+                        return ((int)(this[this.tableGetUsedInventoryItem_Mobile.responsibleSalesmanIdColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'responsibleSalesmanId\' in table \'GetUsedInventoryItem_Mobil" +
+                                "e\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGetUsedInventoryItem_Mobile.responsibleSalesmanIdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public decimal transferamount1 {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableGetUsedInventoryItem_Mobile.transferamount1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'transferamount1\' in table \'GetUsedInventoryItem_Mobile\' is " +
+                                "DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGetUsedInventoryItem_Mobile.transferamount1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public decimal removalamount1 {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableGetUsedInventoryItem_Mobile.removalamount1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'removalamount1\' in table \'GetUsedInventoryItem_Mobile\' is D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGetUsedInventoryItem_Mobile.removalamount1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int transferassets1 {
+                get {
+                    try {
+                        return ((int)(this[this.tableGetUsedInventoryItem_Mobile.transferassets1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'transferassets1\' in table \'GetUsedInventoryItem_Mobile\' is " +
+                                "DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGetUsedInventoryItem_Mobile.transferassets1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsinvnoNull() {
                 return this.IsNull(this.tableGetUsedInventoryItem_Mobile.invnoColumn);
             }
@@ -14234,6 +14598,138 @@ namespace SpikeRest.DAL {
             public void SetsignoridNull() {
                 this[this.tableGetUsedInventoryItem_Mobile.signoridColumn] = global::System.Convert.DBNull;
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IseurosNull() {
+                return this.IsNull(this.tableGetUsedInventoryItem_Mobile.eurosColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SeteurosNull() {
+                this[this.tableGetUsedInventoryItem_Mobile.eurosColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsretailNull() {
+                return this.IsNull(this.tableGetUsedInventoryItem_Mobile.retailColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetretailNull() {
+                this[this.tableGetUsedInventoryItem_Mobile.retailColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Islength1Null() {
+                return this.IsNull(this.tableGetUsedInventoryItem_Mobile.length1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setlength1Null() {
+                this[this.tableGetUsedInventoryItem_Mobile.length1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Iswidth1Null() {
+                return this.IsNull(this.tableGetUsedInventoryItem_Mobile.width1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setwidth1Null() {
+                this[this.tableGetUsedInventoryItem_Mobile.width1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isheight1Null() {
+                return this.IsNull(this.tableGetUsedInventoryItem_Mobile.height1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setheight1Null() {
+                this[this.tableGetUsedInventoryItem_Mobile.height1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isapprox_wt1Null() {
+                return this.IsNull(this.tableGetUsedInventoryItem_Mobile.approx_wt1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setapprox_wt1Null() {
+                this[this.tableGetUsedInventoryItem_Mobile.approx_wt1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsSqftNull() {
+                return this.IsNull(this.tableGetUsedInventoryItem_Mobile.SqftColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetSqftNull() {
+                this[this.tableGetUsedInventoryItem_Mobile.SqftColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsresponsibleSalesmanIdNull() {
+                return this.IsNull(this.tableGetUsedInventoryItem_Mobile.responsibleSalesmanIdColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetresponsibleSalesmanIdNull() {
+                this[this.tableGetUsedInventoryItem_Mobile.responsibleSalesmanIdColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Istransferamount1Null() {
+                return this.IsNull(this.tableGetUsedInventoryItem_Mobile.transferamount1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Settransferamount1Null() {
+                this[this.tableGetUsedInventoryItem_Mobile.transferamount1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isremovalamount1Null() {
+                return this.IsNull(this.tableGetUsedInventoryItem_Mobile.removalamount1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setremovalamount1Null() {
+                this[this.tableGetUsedInventoryItem_Mobile.removalamount1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Istransferassets1Null() {
+                return this.IsNull(this.tableGetUsedInventoryItem_Mobile.transferassets1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Settransferassets1Null() {
+                this[this.tableGetUsedInventoryItem_Mobile.transferassets1Column] = global::System.Convert.DBNull;
+            }
         }
         
         /// <summary>
@@ -14882,11 +15378,6 @@ namespace SpikeRest.DAL.dsMachineTableAdapters {
             tableMapping.ColumnMappings.Add("numberofoffers", "numberofoffers");
             tableMapping.ColumnMappings.Add("numberofdocs", "numberofdocs");
             tableMapping.ColumnMappings.Add("numberofnotes", "numberofnotes");
-            tableMapping.ColumnMappings.Add("width", "width");
-            tableMapping.ColumnMappings.Add("length", "length");
-            tableMapping.ColumnMappings.Add("height", "height");
-            tableMapping.ColumnMappings.Add("approx_wt", "approx_wt");
-            tableMapping.ColumnMappings.Add("Sqft", "sqft");
             tableMapping.ColumnMappings.Add("d_comment", "dimensionComment");
             tableMapping.ColumnMappings.Add("MachinePricingType", "MachinePricingType");
             tableMapping.ColumnMappings.Add("SalesPlanStatus", "SalesPlanStatus");
@@ -14897,20 +15388,27 @@ namespace SpikeRest.DAL.dsMachineTableAdapters {
             tableMapping.ColumnMappings.Add("signornote", "signornote");
             tableMapping.ColumnMappings.Add("exclEndDate", "exclEndDate");
             tableMapping.ColumnMappings.Add("netbacktoseller", "netbacktoseller");
-            tableMapping.ColumnMappings.Add("responsibleSalesmanId", "responsibleSalesmanid");
             tableMapping.ColumnMappings.Add("netbacktoselleramount", "netbacktoselleramount");
             tableMapping.ColumnMappings.Add("netbacktosellerpercentage", "netbacktosellerpercentage");
             tableMapping.ColumnMappings.Add("city", "city");
             tableMapping.ColumnMappings.Add("state", "state");
-            tableMapping.ColumnMappings.Add("transferamount", "transferamount");
             tableMapping.ColumnMappings.Add("transfernote", "transfernote");
-            tableMapping.ColumnMappings.Add("removalamount", "removalamount");
             tableMapping.ColumnMappings.Add("removalnote", "removalnote");
             tableMapping.ColumnMappings.Add("assetcontactname", "assetcontactname");
             tableMapping.ColumnMappings.Add("assetcontactemail", "assetcontactemail");
             tableMapping.ColumnMappings.Add("assetcontactphone", "assetcontactphone");
-            tableMapping.ColumnMappings.Add("transferassets", "transferassets");
             tableMapping.ColumnMappings.Add("signorid", "signorid");
+            tableMapping.ColumnMappings.Add("euros", "euros");
+            tableMapping.ColumnMappings.Add("retail", "retail");
+            tableMapping.ColumnMappings.Add("length", "length1");
+            tableMapping.ColumnMappings.Add("width", "width1");
+            tableMapping.ColumnMappings.Add("height", "height1");
+            tableMapping.ColumnMappings.Add("approx_wt", "approx_wt1");
+            tableMapping.ColumnMappings.Add("Sqft", "Sqft");
+            tableMapping.ColumnMappings.Add("responsibleSalesmanId", "responsibleSalesmanId");
+            tableMapping.ColumnMappings.Add("transferamount", "transferamount1");
+            tableMapping.ColumnMappings.Add("removalamount", "removalamount1");
+            tableMapping.ColumnMappings.Add("transferassets", "transferassets1");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -14932,6 +15430,7 @@ namespace SpikeRest.DAL.dsMachineTableAdapters {
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@invno", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@userid", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@useremail", global::System.Data.SqlDbType.VarChar, 200, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
             this._commandCollection[1].CommandText = "dbo.GetUsedInventorySearch_Mobile";
@@ -14945,7 +15444,7 @@ namespace SpikeRest.DAL.dsMachineTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int FillByInvno(dsMachine.GetUsedInventoryItem_MobileDataTable dataTable, string invno, global::System.Nullable<int> userid) {
+        public virtual int FillByInvno(dsMachine.GetUsedInventoryItem_MobileDataTable dataTable, string invno, global::System.Nullable<int> userid, string useremail) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((invno == null)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -14958,6 +15457,12 @@ namespace SpikeRest.DAL.dsMachineTableAdapters {
             }
             else {
                 this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((useremail == null)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(useremail));
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -14970,7 +15475,7 @@ namespace SpikeRest.DAL.dsMachineTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dsMachine.GetUsedInventoryItem_MobileDataTable GetDataByInvno(string invno, global::System.Nullable<int> userid) {
+        public virtual dsMachine.GetUsedInventoryItem_MobileDataTable GetDataByInvno(string invno, global::System.Nullable<int> userid, string useremail) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((invno == null)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -14983,6 +15488,12 @@ namespace SpikeRest.DAL.dsMachineTableAdapters {
             }
             else {
                 this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((useremail == null)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(useremail));
             }
             dsMachine.GetUsedInventoryItem_MobileDataTable dataTable = new dsMachine.GetUsedInventoryItem_MobileDataTable();
             this.Adapter.Fill(dataTable);

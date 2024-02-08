@@ -222,7 +222,33 @@ namespace SpikeRest.Controllers
             }
         }
         // GET: api/Deals/5
-       public List<DealsInfo> Get(string searchterm, string lob ,string updaterecents, string userid)
+
+        public List<DealsInfo> Get(string searchterm)
+        {
+
+            SpikeRest.DAL.dsDealsTableAdapters.DealsSelectByName_mobileTableAdapter ta = new DAL.dsDealsTableAdapters.DealsSelectByName_mobileTableAdapter();
+            dt.Clear();
+
+            try
+            {
+                dt = ta.GetDataOnWebSite();
+                this.ProcessData();
+
+            }
+            catch (Exception e2)
+            {
+                dealslist = new List<DealsInfo>();
+
+                DealsInfo d = new DealsInfo();
+
+                d.Addr1 = e2.Message;
+
+            }
+            return dealslist;
+        }
+
+
+        public List<DealsInfo> Get(string searchterm, string lob ,string updaterecents, string userid)
         {
            
             SpikeRest.DAL.dsDealsTableAdapters.DealsSelectByName_mobileTableAdapter ta = new DAL.dsDealsTableAdapters.DealsSelectByName_mobileTableAdapter();
@@ -325,9 +351,12 @@ namespace SpikeRest.Controllers
 
                
                 System.IO.DirectoryInfo di = new DirectoryInfo(@"D:\Web2\DealPics\" + dealid);
-                int numberofFilesInFolder = di.GetFiles(lot + "-*.*").Length + 1;
+                if (!di.Exists)
+                {
+                    System.IO.Directory.CreateDirectory(@"D:\Web2\DealPics\" + dealid);
+                }
 
-              
+                int numberofFilesInFolder = di.GetFiles(lot + "-*.*").Length + 1;
 
                 if (httpRequest.Files.Count > 0)
                 {

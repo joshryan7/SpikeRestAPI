@@ -791,17 +791,9 @@ namespace SpikeRest.DAL {
             
             private global::System.Data.DataColumn columnid;
             
-            private global::System.Data.DataColumn columnofferid;
-            
             private global::System.Data.DataColumn columninvno;
             
             private global::System.Data.DataColumn columnamount;
-            
-            private global::System.Data.DataColumn columnid1;
-            
-            private global::System.Data.DataColumn columntotalofferamount;
-            
-            private global::System.Data.DataColumn columnstatus_short;
             
             private global::System.Data.DataColumn columnstatus_long;
             
@@ -809,39 +801,9 @@ namespace SpikeRest.DAL {
             
             private global::System.Data.DataColumn columnoffnote;
             
-            private global::System.Data.DataColumn columnemployeeFirst;
-            
             private global::System.Data.DataColumn columnemployeeLast;
             
-            private global::System.Data.DataColumn columncontactfullname;
-            
-            private global::System.Data.DataColumn columnmfg_short;
-            
-            private global::System.Data.DataColumn columnmfg_long;
-            
-            private global::System.Data.DataColumn columnmodel;
-            
-            private global::System.Data.DataColumn columnserial;
-            
-            private global::System.Data.DataColumn columndescript;
-            
             private global::System.Data.DataColumn columncustname;
-            
-            private global::System.Data.DataColumn columncity;
-            
-            private global::System.Data.DataColumn columncsttype;
-            
-            private global::System.Data.DataColumn columnstate;
-            
-            private global::System.Data.DataColumn columncstno;
-            
-            private global::System.Data.DataColumn columnShipToLocation;
-            
-            private global::System.Data.DataColumn columnprepaid;
-            
-            private global::System.Data.DataColumn columnprepaiddesc;
-            
-            private global::System.Data.DataColumn columnemployeeemail;
             
             private global::System.Data.DataColumn columnRetail;
             
@@ -888,14 +850,6 @@ namespace SpikeRest.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn offeridColumn {
-                get {
-                    return this.columnofferid;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn invnoColumn {
                 get {
                     return this.columninvno;
@@ -907,30 +861,6 @@ namespace SpikeRest.DAL {
             public global::System.Data.DataColumn amountColumn {
                 get {
                     return this.columnamount;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn id1Column {
-                get {
-                    return this.columnid1;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn totalofferamountColumn {
-                get {
-                    return this.columntotalofferamount;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn status_shortColumn {
-                get {
-                    return this.columnstatus_short;
                 }
             }
             
@@ -960,14 +890,6 @@ namespace SpikeRest.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn employeeFirstColumn {
-                get {
-                    return this.columnemployeeFirst;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn employeeLastColumn {
                 get {
                     return this.columnemployeeLast;
@@ -976,121 +898,9 @@ namespace SpikeRest.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn contactfullnameColumn {
-                get {
-                    return this.columncontactfullname;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn mfg_shortColumn {
-                get {
-                    return this.columnmfg_short;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn mfg_longColumn {
-                get {
-                    return this.columnmfg_long;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn modelColumn {
-                get {
-                    return this.columnmodel;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn serialColumn {
-                get {
-                    return this.columnserial;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn descriptColumn {
-                get {
-                    return this.columndescript;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn custnameColumn {
                 get {
                     return this.columncustname;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn cityColumn {
-                get {
-                    return this.columncity;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn csttypeColumn {
-                get {
-                    return this.columncsttype;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn stateColumn {
-                get {
-                    return this.columnstate;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn cstnoColumn {
-                get {
-                    return this.columncstno;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn ShipToLocationColumn {
-                get {
-                    return this.columnShipToLocation;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn prepaidColumn {
-                get {
-                    return this.columnprepaid;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn prepaiddescColumn {
-                get {
-                    return this.columnprepaiddesc;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn employeeemailColumn {
-                get {
-                    return this.columnemployeeemail;
                 }
             }
             
@@ -1139,62 +949,17 @@ namespace SpikeRest.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public OfferMasterSelectByInvnoRow AddOfferMasterSelectByInvnoRow(
-                        int offerid, 
-                        string invno, 
-                        float amount, 
-                        float totalofferamount, 
-                        string status_short, 
-                        string status_long, 
-                        System.DateTime offdate, 
-                        string offnote, 
-                        string employeeFirst, 
-                        string employeeLast, 
-                        string contactfullname, 
-                        string mfg_short, 
-                        string mfg_long, 
-                        string model, 
-                        string serial, 
-                        string descript, 
-                        string custname, 
-                        string city, 
-                        string csttype, 
-                        string state, 
-                        string cstno, 
-                        string ShipToLocation, 
-                        float prepaid, 
-                        string prepaiddesc, 
-                        string employeeemail, 
-                        string Retail) {
+            public OfferMasterSelectByInvnoRow AddOfferMasterSelectByInvnoRow(string invno, float amount, string status_long, System.DateTime offdate, string offnote, string employeeLast, string custname, string Retail) {
                 OfferMasterSelectByInvnoRow rowOfferMasterSelectByInvnoRow = ((OfferMasterSelectByInvnoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        offerid,
                         invno,
                         amount,
-                        null,
-                        totalofferamount,
-                        status_short,
                         status_long,
                         offdate,
                         offnote,
-                        employeeFirst,
                         employeeLast,
-                        contactfullname,
-                        mfg_short,
-                        mfg_long,
-                        model,
-                        serial,
-                        descript,
                         custname,
-                        city,
-                        csttype,
-                        state,
-                        cstno,
-                        ShipToLocation,
-                        prepaid,
-                        prepaiddesc,
-                        employeeemail,
                         Retail};
                 rowOfferMasterSelectByInvnoRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowOfferMasterSelectByInvnoRow);
@@ -1219,32 +984,13 @@ namespace SpikeRest.DAL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
                 this.columnid = base.Columns["id"];
-                this.columnofferid = base.Columns["offerid"];
                 this.columninvno = base.Columns["invno"];
                 this.columnamount = base.Columns["amount"];
-                this.columnid1 = base.Columns["id1"];
-                this.columntotalofferamount = base.Columns["totalofferamount"];
-                this.columnstatus_short = base.Columns["status_short"];
                 this.columnstatus_long = base.Columns["status_long"];
                 this.columnoffdate = base.Columns["offdate"];
                 this.columnoffnote = base.Columns["offnote"];
-                this.columnemployeeFirst = base.Columns["employeeFirst"];
                 this.columnemployeeLast = base.Columns["employeeLast"];
-                this.columncontactfullname = base.Columns["contactfullname"];
-                this.columnmfg_short = base.Columns["mfg_short"];
-                this.columnmfg_long = base.Columns["mfg_long"];
-                this.columnmodel = base.Columns["model"];
-                this.columnserial = base.Columns["serial"];
-                this.columndescript = base.Columns["descript"];
                 this.columncustname = base.Columns["custname"];
-                this.columncity = base.Columns["city"];
-                this.columncsttype = base.Columns["csttype"];
-                this.columnstate = base.Columns["state"];
-                this.columncstno = base.Columns["cstno"];
-                this.columnShipToLocation = base.Columns["ShipToLocation"];
-                this.columnprepaid = base.Columns["prepaid"];
-                this.columnprepaiddesc = base.Columns["prepaiddesc"];
-                this.columnemployeeemail = base.Columns["employeeemail"];
                 this.columnRetail = base.Columns["Retail"];
             }
             
@@ -1253,58 +999,20 @@ namespace SpikeRest.DAL {
             private void InitClass() {
                 this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnid);
-                this.columnofferid = new global::System.Data.DataColumn("offerid", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnofferid);
                 this.columninvno = new global::System.Data.DataColumn("invno", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columninvno);
                 this.columnamount = new global::System.Data.DataColumn("amount", typeof(float), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnamount);
-                this.columnid1 = new global::System.Data.DataColumn("id1", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid1);
-                this.columntotalofferamount = new global::System.Data.DataColumn("totalofferamount", typeof(float), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntotalofferamount);
-                this.columnstatus_short = new global::System.Data.DataColumn("status_short", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnstatus_short);
                 this.columnstatus_long = new global::System.Data.DataColumn("status_long", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnstatus_long);
                 this.columnoffdate = new global::System.Data.DataColumn("offdate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnoffdate);
                 this.columnoffnote = new global::System.Data.DataColumn("offnote", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnoffnote);
-                this.columnemployeeFirst = new global::System.Data.DataColumn("employeeFirst", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnemployeeFirst);
                 this.columnemployeeLast = new global::System.Data.DataColumn("employeeLast", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnemployeeLast);
-                this.columncontactfullname = new global::System.Data.DataColumn("contactfullname", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncontactfullname);
-                this.columnmfg_short = new global::System.Data.DataColumn("mfg_short", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnmfg_short);
-                this.columnmfg_long = new global::System.Data.DataColumn("mfg_long", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnmfg_long);
-                this.columnmodel = new global::System.Data.DataColumn("model", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnmodel);
-                this.columnserial = new global::System.Data.DataColumn("serial", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnserial);
-                this.columndescript = new global::System.Data.DataColumn("descript", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndescript);
                 this.columncustname = new global::System.Data.DataColumn("custname", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncustname);
-                this.columncity = new global::System.Data.DataColumn("city", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncity);
-                this.columncsttype = new global::System.Data.DataColumn("csttype", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncsttype);
-                this.columnstate = new global::System.Data.DataColumn("state", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnstate);
-                this.columncstno = new global::System.Data.DataColumn("cstno", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncstno);
-                this.columnShipToLocation = new global::System.Data.DataColumn("ShipToLocation", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnShipToLocation);
-                this.columnprepaid = new global::System.Data.DataColumn("prepaid", typeof(float), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnprepaid);
-                this.columnprepaiddesc = new global::System.Data.DataColumn("prepaiddesc", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnprepaiddesc);
-                this.columnemployeeemail = new global::System.Data.DataColumn("employeeemail", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnemployeeemail);
                 this.columnRetail = new global::System.Data.DataColumn("Retail", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRetail);
                 this.columnid.AutoIncrement = true;
@@ -1313,33 +1021,11 @@ namespace SpikeRest.DAL {
                 this.columnid.AllowDBNull = false;
                 this.columnid.ReadOnly = true;
                 this.columninvno.MaxLength = 5;
-                this.columnid1.AutoIncrement = true;
-                this.columnid1.AutoIncrementSeed = -1;
-                this.columnid1.AutoIncrementStep = -1;
-                this.columnid1.AllowDBNull = false;
-                this.columnid1.ReadOnly = true;
-                this.columnstatus_short.MaxLength = 1;
                 this.columnstatus_long.ReadOnly = true;
-                this.columnstatus_long.MaxLength = 8;
+                this.columnstatus_long.MaxLength = 20;
                 this.columnoffnote.MaxLength = 2147483647;
-                this.columnemployeeFirst.MaxLength = 50;
                 this.columnemployeeLast.MaxLength = 50;
-                this.columncontactfullname.ReadOnly = true;
-                this.columncontactfullname.MaxLength = 56;
-                this.columnmfg_short.MaxLength = 6;
-                this.columnmfg_long.MaxLength = 50;
-                this.columnmodel.MaxLength = 20;
-                this.columnserial.MaxLength = 19;
-                this.columndescript.MaxLength = 60;
                 this.columncustname.MaxLength = 60;
-                this.columncity.MaxLength = 32;
-                this.columncsttype.MaxLength = 30;
-                this.columnstate.MaxLength = 32;
-                this.columncstno.MaxLength = 6;
-                this.columnShipToLocation.MaxLength = 400;
-                this.columnprepaid.ReadOnly = true;
-                this.columnprepaiddesc.MaxLength = 200;
-                this.columnemployeeemail.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1865,22 +1551,6 @@ namespace SpikeRest.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int offerid {
-                get {
-                    try {
-                        return ((int)(this[this.tableOfferMasterSelectByInvno.offeridColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'offerid\' in table \'OfferMasterSelectByInvno\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableOfferMasterSelectByInvno.offeridColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string invno {
                 get {
                     if (this.IsinvnoNull()) {
@@ -1908,50 +1578,6 @@ namespace SpikeRest.DAL {
                 }
                 set {
                     this[this.tableOfferMasterSelectByInvno.amountColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int id1 {
-                get {
-                    return ((int)(this[this.tableOfferMasterSelectByInvno.id1Column]));
-                }
-                set {
-                    this[this.tableOfferMasterSelectByInvno.id1Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public float totalofferamount {
-                get {
-                    try {
-                        return ((float)(this[this.tableOfferMasterSelectByInvno.totalofferamountColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'totalofferamount\' in table \'OfferMasterSelectByInvno\' is DB" +
-                                "Null.", e);
-                    }
-                }
-                set {
-                    this[this.tableOfferMasterSelectByInvno.totalofferamountColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string status_short {
-                get {
-                    if (this.Isstatus_shortNull()) {
-                        return string.Empty;
-                    }
-                    else {
-                        return ((string)(this[this.tableOfferMasterSelectByInvno.status_shortColumn]));
-                    }
-                }
-                set {
-                    this[this.tableOfferMasterSelectByInvno.status_shortColumn] = value;
                 }
             }
             
@@ -2005,22 +1631,6 @@ namespace SpikeRest.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string employeeFirst {
-                get {
-                    if (this.IsemployeeFirstNull()) {
-                        return string.Empty;
-                    }
-                    else {
-                        return ((string)(this[this.tableOfferMasterSelectByInvno.employeeFirstColumn]));
-                    }
-                }
-                set {
-                    this[this.tableOfferMasterSelectByInvno.employeeFirstColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string employeeLast {
                 get {
                     if (this.IsemployeeLastNull()) {
@@ -2032,102 +1642,6 @@ namespace SpikeRest.DAL {
                 }
                 set {
                     this[this.tableOfferMasterSelectByInvno.employeeLastColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string contactfullname {
-                get {
-                    if (this.IscontactfullnameNull()) {
-                        return string.Empty;
-                    }
-                    else {
-                        return ((string)(this[this.tableOfferMasterSelectByInvno.contactfullnameColumn]));
-                    }
-                }
-                set {
-                    this[this.tableOfferMasterSelectByInvno.contactfullnameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string mfg_short {
-                get {
-                    if (this.Ismfg_shortNull()) {
-                        return string.Empty;
-                    }
-                    else {
-                        return ((string)(this[this.tableOfferMasterSelectByInvno.mfg_shortColumn]));
-                    }
-                }
-                set {
-                    this[this.tableOfferMasterSelectByInvno.mfg_shortColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string mfg_long {
-                get {
-                    if (this.Ismfg_longNull()) {
-                        return string.Empty;
-                    }
-                    else {
-                        return ((string)(this[this.tableOfferMasterSelectByInvno.mfg_longColumn]));
-                    }
-                }
-                set {
-                    this[this.tableOfferMasterSelectByInvno.mfg_longColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string model {
-                get {
-                    if (this.IsmodelNull()) {
-                        return string.Empty;
-                    }
-                    else {
-                        return ((string)(this[this.tableOfferMasterSelectByInvno.modelColumn]));
-                    }
-                }
-                set {
-                    this[this.tableOfferMasterSelectByInvno.modelColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string serial {
-                get {
-                    if (this.IsserialNull()) {
-                        return string.Empty;
-                    }
-                    else {
-                        return ((string)(this[this.tableOfferMasterSelectByInvno.serialColumn]));
-                    }
-                }
-                set {
-                    this[this.tableOfferMasterSelectByInvno.serialColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string descript {
-                get {
-                    if (this.IsdescriptNull()) {
-                        return string.Empty;
-                    }
-                    else {
-                        return ((string)(this[this.tableOfferMasterSelectByInvno.descriptColumn]));
-                    }
-                }
-                set {
-                    this[this.tableOfferMasterSelectByInvno.descriptColumn] = value;
                 }
             }
             
@@ -2149,134 +1663,6 @@ namespace SpikeRest.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string city {
-                get {
-                    if (this.IscityNull()) {
-                        return string.Empty;
-                    }
-                    else {
-                        return ((string)(this[this.tableOfferMasterSelectByInvno.cityColumn]));
-                    }
-                }
-                set {
-                    this[this.tableOfferMasterSelectByInvno.cityColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string csttype {
-                get {
-                    if (this.IscsttypeNull()) {
-                        return string.Empty;
-                    }
-                    else {
-                        return ((string)(this[this.tableOfferMasterSelectByInvno.csttypeColumn]));
-                    }
-                }
-                set {
-                    this[this.tableOfferMasterSelectByInvno.csttypeColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string state {
-                get {
-                    if (this.IsstateNull()) {
-                        return string.Empty;
-                    }
-                    else {
-                        return ((string)(this[this.tableOfferMasterSelectByInvno.stateColumn]));
-                    }
-                }
-                set {
-                    this[this.tableOfferMasterSelectByInvno.stateColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string cstno {
-                get {
-                    if (this.IscstnoNull()) {
-                        return string.Empty;
-                    }
-                    else {
-                        return ((string)(this[this.tableOfferMasterSelectByInvno.cstnoColumn]));
-                    }
-                }
-                set {
-                    this[this.tableOfferMasterSelectByInvno.cstnoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string ShipToLocation {
-                get {
-                    if (this.IsShipToLocationNull()) {
-                        return string.Empty;
-                    }
-                    else {
-                        return ((string)(this[this.tableOfferMasterSelectByInvno.ShipToLocationColumn]));
-                    }
-                }
-                set {
-                    this[this.tableOfferMasterSelectByInvno.ShipToLocationColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public float prepaid {
-                get {
-                    try {
-                        return ((float)(this[this.tableOfferMasterSelectByInvno.prepaidColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'prepaid\' in table \'OfferMasterSelectByInvno\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableOfferMasterSelectByInvno.prepaidColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string prepaiddesc {
-                get {
-                    if (this.IsprepaiddescNull()) {
-                        return string.Empty;
-                    }
-                    else {
-                        return ((string)(this[this.tableOfferMasterSelectByInvno.prepaiddescColumn]));
-                    }
-                }
-                set {
-                    this[this.tableOfferMasterSelectByInvno.prepaiddescColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string employeeemail {
-                get {
-                    if (this.IsemployeeemailNull()) {
-                        return string.Empty;
-                    }
-                    else {
-                        return ((string)(this[this.tableOfferMasterSelectByInvno.employeeemailColumn]));
-                    }
-                }
-                set {
-                    this[this.tableOfferMasterSelectByInvno.employeeemailColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Retail {
                 get {
                     if (this.IsRetailNull()) {
@@ -2289,18 +1675,6 @@ namespace SpikeRest.DAL {
                 set {
                     this[this.tableOfferMasterSelectByInvno.RetailColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsofferidNull() {
-                return this.IsNull(this.tableOfferMasterSelectByInvno.offeridColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetofferidNull() {
-                this[this.tableOfferMasterSelectByInvno.offeridColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2325,30 +1699,6 @@ namespace SpikeRest.DAL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetamountNull() {
                 this[this.tableOfferMasterSelectByInvno.amountColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IstotalofferamountNull() {
-                return this.IsNull(this.tableOfferMasterSelectByInvno.totalofferamountColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SettotalofferamountNull() {
-                this[this.tableOfferMasterSelectByInvno.totalofferamountColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Isstatus_shortNull() {
-                return this.IsNull(this.tableOfferMasterSelectByInvno.status_shortColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setstatus_shortNull() {
-                this[this.tableOfferMasterSelectByInvno.status_shortColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2389,18 +1739,6 @@ namespace SpikeRest.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsemployeeFirstNull() {
-                return this.IsNull(this.tableOfferMasterSelectByInvno.employeeFirstColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetemployeeFirstNull() {
-                this[this.tableOfferMasterSelectByInvno.employeeFirstColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsemployeeLastNull() {
                 return this.IsNull(this.tableOfferMasterSelectByInvno.employeeLastColumn);
             }
@@ -2413,78 +1751,6 @@ namespace SpikeRest.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IscontactfullnameNull() {
-                return this.IsNull(this.tableOfferMasterSelectByInvno.contactfullnameColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetcontactfullnameNull() {
-                this[this.tableOfferMasterSelectByInvno.contactfullnameColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Ismfg_shortNull() {
-                return this.IsNull(this.tableOfferMasterSelectByInvno.mfg_shortColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setmfg_shortNull() {
-                this[this.tableOfferMasterSelectByInvno.mfg_shortColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Ismfg_longNull() {
-                return this.IsNull(this.tableOfferMasterSelectByInvno.mfg_longColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setmfg_longNull() {
-                this[this.tableOfferMasterSelectByInvno.mfg_longColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsmodelNull() {
-                return this.IsNull(this.tableOfferMasterSelectByInvno.modelColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetmodelNull() {
-                this[this.tableOfferMasterSelectByInvno.modelColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsserialNull() {
-                return this.IsNull(this.tableOfferMasterSelectByInvno.serialColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetserialNull() {
-                this[this.tableOfferMasterSelectByInvno.serialColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsdescriptNull() {
-                return this.IsNull(this.tableOfferMasterSelectByInvno.descriptColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetdescriptNull() {
-                this[this.tableOfferMasterSelectByInvno.descriptColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IscustnameNull() {
                 return this.IsNull(this.tableOfferMasterSelectByInvno.custnameColumn);
             }
@@ -2493,102 +1759,6 @@ namespace SpikeRest.DAL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetcustnameNull() {
                 this[this.tableOfferMasterSelectByInvno.custnameColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IscityNull() {
-                return this.IsNull(this.tableOfferMasterSelectByInvno.cityColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetcityNull() {
-                this[this.tableOfferMasterSelectByInvno.cityColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IscsttypeNull() {
-                return this.IsNull(this.tableOfferMasterSelectByInvno.csttypeColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetcsttypeNull() {
-                this[this.tableOfferMasterSelectByInvno.csttypeColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsstateNull() {
-                return this.IsNull(this.tableOfferMasterSelectByInvno.stateColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetstateNull() {
-                this[this.tableOfferMasterSelectByInvno.stateColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IscstnoNull() {
-                return this.IsNull(this.tableOfferMasterSelectByInvno.cstnoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetcstnoNull() {
-                this[this.tableOfferMasterSelectByInvno.cstnoColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsShipToLocationNull() {
-                return this.IsNull(this.tableOfferMasterSelectByInvno.ShipToLocationColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetShipToLocationNull() {
-                this[this.tableOfferMasterSelectByInvno.ShipToLocationColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsprepaidNull() {
-                return this.IsNull(this.tableOfferMasterSelectByInvno.prepaidColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetprepaidNull() {
-                this[this.tableOfferMasterSelectByInvno.prepaidColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsprepaiddescNull() {
-                return this.IsNull(this.tableOfferMasterSelectByInvno.prepaiddescColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetprepaiddescNull() {
-                this[this.tableOfferMasterSelectByInvno.prepaiddescColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsemployeeemailNull() {
-                return this.IsNull(this.tableOfferMasterSelectByInvno.employeeemailColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetemployeeemailNull() {
-                this[this.tableOfferMasterSelectByInvno.employeeemailColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2993,32 +2163,13 @@ namespace SpikeRest.DAL.dsMachineInfoTableAdapters {
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "OfferMasterSelectByInvno";
             tableMapping.ColumnMappings.Add("id", "id");
-            tableMapping.ColumnMappings.Add("offerid", "offerid");
             tableMapping.ColumnMappings.Add("invno", "invno");
             tableMapping.ColumnMappings.Add("amount", "amount");
-            tableMapping.ColumnMappings.Add("id1", "id1");
-            tableMapping.ColumnMappings.Add("totalofferamount", "totalofferamount");
-            tableMapping.ColumnMappings.Add("status_short", "status_short");
             tableMapping.ColumnMappings.Add("status_long", "status_long");
             tableMapping.ColumnMappings.Add("offdate", "offdate");
             tableMapping.ColumnMappings.Add("offnote", "offnote");
-            tableMapping.ColumnMappings.Add("employeeFirst", "employeeFirst");
             tableMapping.ColumnMappings.Add("employeeLast", "employeeLast");
-            tableMapping.ColumnMappings.Add("contactfullname", "contactfullname");
-            tableMapping.ColumnMappings.Add("mfg_short", "mfg_short");
-            tableMapping.ColumnMappings.Add("mfg_long", "mfg_long");
-            tableMapping.ColumnMappings.Add("model", "model");
-            tableMapping.ColumnMappings.Add("serial", "serial");
-            tableMapping.ColumnMappings.Add("descript", "descript");
             tableMapping.ColumnMappings.Add("custname", "custname");
-            tableMapping.ColumnMappings.Add("city", "city");
-            tableMapping.ColumnMappings.Add("csttype", "csttype");
-            tableMapping.ColumnMappings.Add("state", "state");
-            tableMapping.ColumnMappings.Add("cstno", "cstno");
-            tableMapping.ColumnMappings.Add("ShipToLocation", "ShipToLocation");
-            tableMapping.ColumnMappings.Add("prepaid", "prepaid");
-            tableMapping.ColumnMappings.Add("prepaiddesc", "prepaiddesc");
-            tableMapping.ColumnMappings.Add("employeeemail", "employeeemail");
             tableMapping.ColumnMappings.Add("retail", "Retail");
             this._adapter.TableMappings.Add(tableMapping);
         }
