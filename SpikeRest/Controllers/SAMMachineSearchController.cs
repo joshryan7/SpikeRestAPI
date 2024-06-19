@@ -26,7 +26,8 @@ namespace SpikeRest.Controllers
                 Year = "1999",
                 ImageMain = "12345_1.jpg",
                 Jvpinvno = "SAM number",
-                Model = "12345 model"
+                Model = "12345 model",
+                Reserved = "False"
             };
         }
 
@@ -37,9 +38,14 @@ namespace SpikeRest.Controllers
 
             dsMachineSearch.GetUsedInventorySearchSAM_MobileDataTable dt = new dsMachineSearch.GetUsedInventorySearchSAM_MobileDataTable();
             SpikeRest.DAL.SAM.dsMachineSearchTableAdapters.GetUsedInventorySearchSAM_MobileTableAdapter ta = new DAL.SAM.dsMachineSearchTableAdapters.GetUsedInventorySearchSAM_MobileTableAdapter();
-
-            dt = ta.GetData(search, vendorid);
-
+            try
+            {
+                dt = ta.GetData(search, vendorid);
+            }
+            catch (Exception e2)
+            {
+                string msg = e2.Message;
+            }
             int x = 0;
             while (x < dt.Rows.Count)
             {
@@ -50,6 +56,7 @@ namespace SpikeRest.Controllers
                 i.ImageMain = dt[x].ItemImageName;
                 i.Year = dt[x].year;
                 i.Model = dt[x].model;
+                i.Reserved = dt[x].reserved.ToString();
 
                 machineList.Add(i);
 

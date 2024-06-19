@@ -105,6 +105,8 @@ namespace SpikeRest.Controllers
             string _assetcontactemail = "";
             string _assetcontactphone = "";
             string _transferassets = "";
+            string _reserved = "";
+            string _bookvalue = "";
 
             dt = ta.GetDataByInvno(invno, userid, "");
             
@@ -199,6 +201,9 @@ namespace SpikeRest.Controllers
                 _assetcontactemail = dt[0].assetcontactemail;
                 _assetcontactphone = dt[0].assetcontactphone;
                 _transferassets = dt[0].transferassets;
+                _reserved = dt[0].reserved.ToString();
+                _bookvalue = dt[0].bookvalue;
+
 
                 try
                 {
@@ -309,7 +314,9 @@ namespace SpikeRest.Controllers
                 Assetcontactname = _assetcontactname,
                 Assetcontactemail = _assetcontactemail,
                 Assetcontactphone = _assetcontactphone,
-                Transferassets = _transferassets
+                Transferassets = _transferassets,
+                Reserved = _reserved,
+                Bookvalue = _bookvalue
                 
                 //Transferamount = "12345",
                 //Transfernote = "Hello"
@@ -416,6 +423,8 @@ namespace SpikeRest.Controllers
             string _assetcontactemail = "";
             string _assetcontactphone = "";
             string _transferassets = "";
+            string _reserved = "";
+            string _bookvalue = "";
 
             // calls stored procedure GetUsedInventoryItem_Mobile
             dt = ta.GetDataByInvno(invno, 0 , useremail);
@@ -511,6 +520,8 @@ namespace SpikeRest.Controllers
                 _assetcontactemail = dt[0].assetcontactemail;
                 _assetcontactphone = dt[0].assetcontactphone;
                 _transferassets = dt[0].transferassets;
+                _reserved = dt[0].reserved.ToString();
+                _bookvalue = dt[0].bookvalue;
 
                 try
                 {
@@ -621,7 +632,9 @@ namespace SpikeRest.Controllers
                 Assetcontactname = _assetcontactname,
                 Assetcontactemail = _assetcontactemail,
                 Assetcontactphone = _assetcontactphone,
-                Transferassets = _transferassets
+                Transferassets = _transferassets,
+                Reserved = _reserved,
+                Bookvalue = _bookvalue
 
                 //Transferamount = "12345",
                 //Transfernote = "Hello"
@@ -656,7 +669,14 @@ namespace SpikeRest.Controllers
         public string Post([FromUri]string invno)
         {
             string result2 = "Photo Uploaded";
-
+            string fname = "";
+            int ipos = -1;
+            ipos = invno.IndexOf("|");
+            if (ipos > 1)
+            {
+                fname = invno.Substring(0, ipos);
+                invno = invno.Substring(ipos + 1);
+            }
 
             ConnectionStringSettingsCollection connectionStrings = ConfigurationManager.ConnectionStrings;
             string cnToUse = "";
@@ -666,7 +686,6 @@ namespace SpikeRest.Controllers
                 if (connection.Name == "CRMConnectionString")
                 {
                     cnToUse = connection.ConnectionString;
-
                     break;
                 }
             }
@@ -682,73 +701,74 @@ namespace SpikeRest.Controllers
 
             try
             {
+                //for future use to perhaps return a custom response and/or error response if an error occurs
+                // see this URL https://www.c-sharpcorner.com/UploadFile/036f9e/httpresponsemessage-in-webapi166/
                 HttpResponseMessage result = null;
+
                 var httpRequest = System.Web.HttpContext.Current.Request;
                 cmd.Parameters.Clear();
                 cmd.Parameters.Add(new SqlParameter("@msg", invno + " Machine, file count is " + httpRequest.Files.Count.ToString()));
                 cmd.Parameters.Add(new SqlParameter("@application", "iOS Machine Photo"));
                 int nrows = Convert.ToInt32(cmd.ExecuteNonQuery());
 
-                cmd.Parameters.Clear();
-                cmd.Parameters.Add(new SqlParameter("@msg", invno + " invno"));
-                cmd.Parameters.Add(new SqlParameter("@application", "iOS Machine Photo"));
-                nrows = Convert.ToInt32(cmd.ExecuteNonQuery());
-                
-                System.IO.DirectoryInfo di = new System.IO.DirectoryInfo(@"D:\Web2\MachinePics\" + invno);
 
-                
+                System.IO.DirectoryInfo di;
+                string outputPath = "";
+                if (fname.Length == 0)
+                {
+                    outputPath = @"D:\Web2\MachinePics\" + invno;
+                   
+                }
+                else
+                {
+                    outputPath = @"D:\Web2\MachinePics\" + fname + @"\" + invno;
+                   
+                }
+
+                di = new System.IO.DirectoryInfo(outputPath);
                 if (!di.Exists)
                 {
-                    System.IO.Directory.CreateDirectory(@"D:\Web2\MachinePics\" + invno);
-                   // di.CreateSubdirectory(@"D:\Web2\MachinePics\" + invno);
+                    System.IO.Directory.CreateDirectory(outputPath);
+                    // di.CreateSubdirectory(@"D:\Web2\MachinePics\" + invno);
                 }
+
+
                 int numberofFilesInFolder = di.GetFiles(invno + "*.*").Length + 1;
-                
+
                 if (httpRequest.Files.Count > 0)
                 {
-                    var docfiles = new List<string>();
                     foreach (string file in httpRequest.Files)
                     {
                         var postedFile = httpRequest.Files[file];
-                        //var filePath = HttpContext.Current.Server.MapPath("~/" + postedFile.FileName);
-                        var filePath = @"D:\Web2\MachinePics\" + invno + @"\" + invno + "-" + numberofFilesInFolder.ToString() + ".jpg";
-
+                        var filePath = outputPath + @"\" + invno + "-" + numberofFilesInFolder.ToString() + ".jpg";
 
                         cmd.Parameters.Clear();
-                        cmd.Parameters.Add(new SqlParameter("@msg", filePath + " file path"));
+                        cmd.Parameters.Add(new SqlParameter("@msg", "Processing " + filePath + " file path"));
                         cmd.Parameters.Add(new SqlParameter("@application", "iOS Machine Photo"));
                         nrows = Convert.ToInt32(cmd.ExecuteNonQuery());
 
-                        bool b = false;
-                        while (!b)
+                        while (1==1)
                         {
                             if (System.IO.File.Exists(filePath))
                             {
                                 numberofFilesInFolder++;
-
-                                filePath = @"D:\Web2\MachinePics\" + invno + @"\" + "-" + numberofFilesInFolder.ToString() + ".jpg";
+                                filePath = outputPath + @"\" + invno + "-" + numberofFilesInFolder.ToString() + ".jpg";
                             }
                             else
                             {
                                 break;
                             }
                         }
-                        postedFile.SaveAs(filePath);
-
-                        // docfiles.Add(filePath);
+                            postedFile.SaveAs(filePath);
                     }
                 }
-
             }
             catch (Exception e2)
             {
                 cmd.Parameters.Clear();
-
-                cmd.Parameters.Add(new SqlParameter("@msg", "API Error POST " + e2.Message));
+                cmd.Parameters.Add(new SqlParameter("@msg", "API Error POST " + e2.Message ));
                 cmd.Parameters.Add(new SqlParameter("@application", "iOS Machine Photo"));
-
                 int nrows = Convert.ToInt32(cmd.ExecuteNonQuery());
-
                 result2 = "Error: " + e2.Message;
             }
 

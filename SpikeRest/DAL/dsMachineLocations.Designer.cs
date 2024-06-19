@@ -657,6 +657,10 @@ namespace SpikeRest.DAL {
             
             private global::System.Data.DataColumn columnmodel;
             
+            private global::System.Data.DataColumn columnreserved;
+            
+            private global::System.Data.DataColumn columnbookvalue;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public GetUsedInventoryForALocation_MobileDataTable() {
@@ -940,6 +944,22 @@ namespace SpikeRest.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn reservedColumn {
+                get {
+                    return this.columnreserved;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn bookvalueColumn {
+                get {
+                    return this.columnbookvalue;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1006,7 +1026,9 @@ namespace SpikeRest.DAL {
                         string MetaDataDescription, 
                         string titleTag, 
                         int dealid, 
-                        string model) {
+                        string model, 
+                        bool reserved, 
+                        string bookvalue) {
                 GetUsedInventoryForALocation_MobileRow rowGetUsedInventoryForALocation_MobileRow = ((GetUsedInventoryForALocation_MobileRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         productid,
@@ -1039,7 +1061,9 @@ namespace SpikeRest.DAL {
                         MetaDataDescription,
                         titleTag,
                         dealid,
-                        model};
+                        model,
+                        reserved,
+                        bookvalue};
                 rowGetUsedInventoryForALocation_MobileRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowGetUsedInventoryForALocation_MobileRow);
                 return rowGetUsedInventoryForALocation_MobileRow;
@@ -1093,6 +1117,8 @@ namespace SpikeRest.DAL {
                 this.columntitleTag = base.Columns["titleTag"];
                 this.columndealid = base.Columns["dealid"];
                 this.columnmodel = base.Columns["model"];
+                this.columnreserved = base.Columns["reserved"];
+                this.columnbookvalue = base.Columns["bookvalue"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1160,8 +1186,12 @@ namespace SpikeRest.DAL {
                 base.Columns.Add(this.columndealid);
                 this.columnmodel = new global::System.Data.DataColumn("model", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnmodel);
+                this.columnreserved = new global::System.Data.DataColumn("reserved", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnreserved);
+                this.columnbookvalue = new global::System.Data.DataColumn("bookvalue", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnbookvalue);
                 this.columnproductid.MaxLength = 5;
-                this.columnjvpinvno.MaxLength = 20;
+                this.columnjvpinvno.MaxLength = 30;
                 this.columnItemName.ReadOnly = true;
                 this.columnItemName.MaxLength = 250;
                 this.columnmfgLong.ReadOnly = true;
@@ -1963,6 +1993,39 @@ namespace SpikeRest.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool reserved {
+                get {
+                    try {
+                        return ((bool)(this[this.tableGetUsedInventoryForALocation_Mobile.reservedColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'reserved\' in table \'GetUsedInventoryForALocation_Mobile\' is" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGetUsedInventoryForALocation_Mobile.reservedColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string bookvalue {
+                get {
+                    if (this.IsbookvalueNull()) {
+                        return string.Empty;
+                    }
+                    else {
+                        return ((string)(this[this.tableGetUsedInventoryForALocation_Mobile.bookvalueColumn]));
+                    }
+                }
+                set {
+                    this[this.tableGetUsedInventoryForALocation_Mobile.bookvalueColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsproductidNull() {
                 return this.IsNull(this.tableGetUsedInventoryForALocation_Mobile.productidColumn);
             }
@@ -2331,6 +2394,30 @@ namespace SpikeRest.DAL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetmodelNull() {
                 this[this.tableGetUsedInventoryForALocation_Mobile.modelColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsreservedNull() {
+                return this.IsNull(this.tableGetUsedInventoryForALocation_Mobile.reservedColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetreservedNull() {
+                this[this.tableGetUsedInventoryForALocation_Mobile.reservedColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsbookvalueNull() {
+                return this.IsNull(this.tableGetUsedInventoryForALocation_Mobile.bookvalueColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetbookvalueNull() {
+                this[this.tableGetUsedInventoryForALocation_Mobile.bookvalueColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -2741,6 +2828,8 @@ namespace SpikeRest.DAL.dsMachineLocationsTableAdapters {
             tableMapping.ColumnMappings.Add("titleTag", "titleTag");
             tableMapping.ColumnMappings.Add("dealid", "dealid");
             tableMapping.ColumnMappings.Add("model", "model");
+            tableMapping.ColumnMappings.Add("reserved", "reserved");
+            tableMapping.ColumnMappings.Add("bookvalue", "bookvalue");
             this._adapter.TableMappings.Add(tableMapping);
         }
         

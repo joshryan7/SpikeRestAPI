@@ -576,7 +576,7 @@ namespace SpikeRest.DAL {
                 this.columnexclFromPostRelieved = new global::System.Data.DataColumn("exclFromPostRelieved", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnexclFromPostRelieved);
                 this.columnjvpinfo.ReadOnly = true;
-                this.columnjvpinfo.MaxLength = 28;
+                this.columnjvpinfo.MaxLength = 30;
                 this.columnextvendorcost.ReadOnly = true;
                 this.columnlaborcost.ReadOnly = true;
                 this.columnid.ReadOnly = true;

@@ -26,5 +26,8 @@ namespace SpikeRest.Models.SAM
 
         [DataMember(Name = "model")]
         public string Model { get; set; }
+
+        [DataMember(Name = "reserved")]
+        public string Reserved { get; set; }
     }
 }

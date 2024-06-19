@@ -54,10 +54,12 @@ namespace SpikeRest.Controllers
 
             enddate = enddate.AddDays(1);
 
+            customerhistorylist = new List<CustomerHistoryInfo>();
+
             dt = ta.GetData(cstno, startdate, enddate, true, true, true, true, true, true, true);
             if (dt.Rows.Count > 0)
             {
-                customerhistorylist = new List<CustomerHistoryInfo>();
+               
                 int i = 0;
                 while (i < dt.Rows.Count)
                 {

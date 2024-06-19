@@ -3174,7 +3174,7 @@ namespace SpikeRest.DAL {
                 this.columnjvpcode.ReadOnly = true;
                 this.columnjvpcode.MaxLength = 30;
                 this.columnJVPPER.ReadOnly = true;
-                this.columnJVPINVNO.MaxLength = 10;
+                this.columnJVPINVNO.MaxLength = 30;
                 this.columnHLD_STAT.MaxLength = 1;
                 this.columnCoderef.MaxLength = 50;
                 this.columncatdesc.ReadOnly = true;

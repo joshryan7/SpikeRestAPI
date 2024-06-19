@@ -54,8 +54,14 @@ namespace SpikeRest.Controllers
         {
             dsMachineManufacturers.GetUsedInventoryForAManufacturer_MobileDataTable dt = new dsMachineManufacturers.GetUsedInventoryForAManufacturer_MobileDataTable();
             SpikeRest.DAL.dsMachineManufacturersTableAdapters.GetUsedInventoryForAManufacturer_MobileTableAdapter ta = new DAL.dsMachineManufacturersTableAdapters.GetUsedInventoryForAManufacturer_MobileTableAdapter();
-
-            dt = ta.GetData(mfg, vendorid);
+            try
+            {
+                dt = ta.GetData(mfg, vendorid);
+            }
+            catch(Exception e2)
+            {
+                string msg = e2.Message;
+            }
             machineList = new List<MachineInfo>();
 
             int x = 0;
@@ -67,6 +73,7 @@ namespace SpikeRest.Controllers
                 i.Year = dt[x].year;
                 i.ImageMain = dt[x].ItemImageName;
                 i.Jvpinvno = dt[x].jvpinvno.Trim();
+                i.Reserved = dt[x].reserved.ToString();
                 x++;
 
                 machineList.Add(i);

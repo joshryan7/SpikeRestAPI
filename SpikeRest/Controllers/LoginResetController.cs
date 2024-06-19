@@ -165,7 +165,12 @@ namespace SpikeRest.Controllers
         public UserInfo Get(string useremail, string np , string vcode)
         {
             ConnectionStringSettingsCollection connectionStrings = ConfigurationManager.ConnectionStrings;
-            string cnToUse = "";
+            string pglConnection = "";
+            string webConnection = "";
+
+            string qresultpgl = "";
+            string qresultWeb = "";
+            
 
             try
             {
@@ -173,16 +178,17 @@ namespace SpikeRest.Controllers
                 {
                     if (connection.Name == "CRMConnectionString")
                     {
-                        cnToUse = connection.ConnectionString;
-
-                        break;
+                        pglConnection = connection.ConnectionString;
                     }
-
+                    else if (connection.Name == "WEBConnectionString")
+                    {
+                        webConnection = connection.ConnectionString;
+                    }
                 }
 
                 SqlCommand cmd = new SqlCommand();
                 SqlConnection cn = new SqlConnection();
-                cn.ConnectionString = cnToUse;
+                cn.ConnectionString = pglConnection;
                 cn.Open();
                 cmd.Connection = cn;
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -193,11 +199,47 @@ namespace SpikeRest.Controllers
                 cmd.Parameters.Add(new SqlParameter("@newpassword", np));
                 cmd.Parameters.Add(new SqlParameter("@validationcode", vcode));
 
-                int nrows = Convert.ToInt32(cmd.ExecuteNonQuery());
+                qresultpgl = cmd.ExecuteScalar().ToString();
+                if (qresultpgl == "1")
+                {
+                    qresultpgl = "success";
+                }
 
                 cmd.Dispose();
                 cn.Close();
                 cn.Dispose();
+
+                // Update the website int_users too.
+                if (qresultpgl == "success")
+                {
+
+                    SqlCommand cmdWeb = new SqlCommand();
+                    SqlConnection cnWeb = new SqlConnection();
+                    cnWeb.ConnectionString = webConnection;
+                    cnWeb.Open();
+
+                    cmdWeb.Connection = cnWeb;
+                    cmdWeb.CommandType = CommandType.StoredProcedure;
+                    cmdWeb.CommandText = "PasswordSAM_Update";
+                    cmdWeb.Parameters.Clear();
+
+                    /* However, the website database is not aware of the validation code, thus we use this special code 8675309 so that the update works
+                     */
+
+                    cmdWeb.Parameters.Add(new SqlParameter("@useremail", useremail));
+                    cmdWeb.Parameters.Add(new SqlParameter("@newpassword", np));
+                    cmdWeb.Parameters.Add(new SqlParameter("@validationcode", "8675309"));
+
+                    qresultWeb = cmdWeb.ExecuteScalar().ToString();
+                    if (qresultWeb == "1")
+                    {
+                        qresultWeb = "success";
+                    }
+
+                    cmdWeb.Dispose();
+                    cnWeb.Close();
+                    cnWeb.Dispose();
+                }
 
                 // get the user's record to return to the SAM app, as it uses the info for
                 // validation

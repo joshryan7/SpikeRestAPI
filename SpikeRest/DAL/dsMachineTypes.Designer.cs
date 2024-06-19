@@ -333,6 +333,10 @@ namespace SpikeRest.DAL {
             
             private global::System.Data.DataColumn columnjvpinvno;
             
+            private global::System.Data.DataColumn columnreserved;
+            
+            private global::System.Data.DataColumn columnbookvalue;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public GetUsedInventoryForACategory_MobileDataTable() {
@@ -584,6 +588,22 @@ namespace SpikeRest.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn reservedColumn {
+                get {
+                    return this.columnreserved;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn bookvalueColumn {
+                get {
+                    return this.columnbookvalue;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -646,7 +666,9 @@ namespace SpikeRest.DAL {
                         string ORDER1, 
                         int dealid, 
                         string model, 
-                        string jvpinvno) {
+                        string jvpinvno, 
+                        bool reserved, 
+                        string bookvalue) {
                 GetUsedInventoryForACategory_MobileRow rowGetUsedInventoryForACategory_MobileRow = ((GetUsedInventoryForACategory_MobileRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         invno,
@@ -675,7 +697,9 @@ namespace SpikeRest.DAL {
                         ORDER1,
                         dealid,
                         model,
-                        jvpinvno};
+                        jvpinvno,
+                        reserved,
+                        bookvalue};
                 rowGetUsedInventoryForACategory_MobileRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowGetUsedInventoryForACategory_MobileRow);
                 return rowGetUsedInventoryForACategory_MobileRow;
@@ -725,6 +749,8 @@ namespace SpikeRest.DAL {
                 this.columndealid = base.Columns["dealid"];
                 this.columnmodel = base.Columns["model"];
                 this.columnjvpinvno = base.Columns["jvpinvno"];
+                this.columnreserved = base.Columns["reserved"];
+                this.columnbookvalue = base.Columns["bookvalue"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -784,6 +810,10 @@ namespace SpikeRest.DAL {
                 base.Columns.Add(this.columnmodel);
                 this.columnjvpinvno = new global::System.Data.DataColumn("jvpinvno", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnjvpinvno);
+                this.columnreserved = new global::System.Data.DataColumn("reserved", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnreserved);
+                this.columnbookvalue = new global::System.Data.DataColumn("bookvalue", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnbookvalue);
                 this.columninvno.Caption = "productid";
                 this.columninvno.MaxLength = 5;
                 this.columnItemName.ReadOnly = true;
@@ -1409,6 +1439,39 @@ namespace SpikeRest.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool reserved {
+                get {
+                    try {
+                        return ((bool)(this[this.tableGetUsedInventoryForACategory_Mobile.reservedColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'reserved\' in table \'GetUsedInventoryForACategory_Mobile\' is" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGetUsedInventoryForACategory_Mobile.reservedColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string bookvalue {
+                get {
+                    if (this.IsbookvalueNull()) {
+                        return string.Empty;
+                    }
+                    else {
+                        return ((string)(this[this.tableGetUsedInventoryForACategory_Mobile.bookvalueColumn]));
+                    }
+                }
+                set {
+                    this[this.tableGetUsedInventoryForACategory_Mobile.bookvalueColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsinvnoNull() {
                 return this.IsNull(this.tableGetUsedInventoryForACategory_Mobile.invnoColumn);
             }
@@ -1730,6 +1793,30 @@ namespace SpikeRest.DAL {
             public void SetjvpinvnoNull() {
                 this[this.tableGetUsedInventoryForACategory_Mobile.jvpinvnoColumn] = global::System.Convert.DBNull;
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsreservedNull() {
+                return this.IsNull(this.tableGetUsedInventoryForACategory_Mobile.reservedColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetreservedNull() {
+                this[this.tableGetUsedInventoryForACategory_Mobile.reservedColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsbookvalueNull() {
+                return this.IsNull(this.tableGetUsedInventoryForACategory_Mobile.bookvalueColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetbookvalueNull() {
+                this[this.tableGetUsedInventoryForACategory_Mobile.bookvalueColumn] = global::System.Convert.DBNull;
+            }
         }
         
         /// <summary>
@@ -1918,6 +2005,8 @@ namespace SpikeRest.DAL.dsMachineTypesTableAdapters {
             tableMapping.ColumnMappings.Add("dealid", "dealid");
             tableMapping.ColumnMappings.Add("model", "model");
             tableMapping.ColumnMappings.Add("jvpinvno", "jvpinvno");
+            tableMapping.ColumnMappings.Add("reserved", "reserved");
+            tableMapping.ColumnMappings.Add("bookvalue", "bookvalue");
             this._adapter.TableMappings.Add(tableMapping);
         }
         

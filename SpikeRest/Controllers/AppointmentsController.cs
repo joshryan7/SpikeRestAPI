@@ -6,6 +6,9 @@ using System.Net.Http;
 using System.Web.Http;
 using SpikeRest.Models;
 using SpikeRest.DAL;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace SpikeRest.Controllers
 {
@@ -66,6 +69,87 @@ namespace SpikeRest.Controllers
             //    appointmentslist.Add(a);
             //}
             return appointmentslist;
+        }
+
+        public AppointmentsInfo Get(string cstno,
+            string apptdate,
+            string appttime,
+            string ampm,
+            string status,
+            string createbyid,
+            string addbyid,
+            string step,
+            string relatedid,
+            string relatedtype,
+            string note,
+            string contactid)
+        {
+            string result = "true";
+
+            
+            ConnectionStringSettingsCollection connectionStrings = ConfigurationManager.ConnectionStrings;
+            string cnToUse = "";
+
+            foreach (ConnectionStringSettings connection in connectionStrings)
+            {
+                if (connection.Name == "CRMConnectionString")
+                {
+                    cnToUse = connection.ConnectionString;
+
+                    break;
+                }
+
+            }
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                SqlConnection cn = new SqlConnection();
+                cn.ConnectionString = cnToUse;
+                cn.Open();
+
+
+                cmd.Connection = cn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "AppointmentInsert_Mobile";
+                cmd.Parameters.Clear();
+
+                cmd.Parameters.Add(new SqlParameter("@cstno", cstno));
+                cmd.Parameters.Add(new SqlParameter("@apptdate", apptdate));
+                cmd.Parameters.Add(new SqlParameter("@appttime", appttime));
+                cmd.Parameters.Add(new SqlParameter("@ampm", ampm));
+                cmd.Parameters.Add(new SqlParameter("@status", status));
+                cmd.Parameters.Add(new SqlParameter("@createbyid", createbyid));
+                cmd.Parameters.Add(new SqlParameter("@addbyid", addbyid));
+                cmd.Parameters.Add(new SqlParameter("@step", step));
+                cmd.Parameters.Add(new SqlParameter("@relatedid", relatedid));
+                cmd.Parameters.Add(new SqlParameter("@relatedtype", relatedtype));
+                cmd.Parameters.Add(new SqlParameter("@note", note));
+                cmd.Parameters.Add(new SqlParameter("@contactid", contactid));
+
+                int nrows = Convert.ToInt32(cmd.ExecuteNonQuery());
+
+                cmd.Dispose();
+                cn.Close();
+                cn.Dispose();
+                result = "success";
+
+            }
+            catch (Exception e2)
+            {
+                result = "fail";
+                result = "fail: " + e2.Message;
+            }
+
+            return new AppointmentsInfo
+            {
+                Appdate = apptdate,
+                Custname = result,
+                Fullname = "",
+                Note = "",
+                Cstno = cstno,
+                Appttime = appttime
+            };
         }
 
         // POST: api/Appointments

@@ -29,6 +29,7 @@
               <Mapping SourceColumn="ItemImageName" DataSetColumn="ItemImageName" />
               <Mapping SourceColumn="year" DataSetColumn="year" />
               <Mapping SourceColumn="model" DataSetColumn="model" />
+              <Mapping SourceColumn="reserved" DataSetColumn="reserved" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -37,54 +38,55 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="dsMachineSearch" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsMachineSearch" msprop:Generator_UserDSName="dsMachineSearch">
+  <xs:element name="dsMachineSearch" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsMachineSearch" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsMachineSearch">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="GetUsedInventorySearchSAM_Mobile" msprop:Generator_TableClassName="GetUsedInventorySearchSAM_MobileDataTable" msprop:Generator_TableVarName="tableGetUsedInventorySearchSAM_Mobile" msprop:Generator_RowChangedName="GetUsedInventorySearchSAM_MobileRowChanged" msprop:Generator_TablePropName="GetUsedInventorySearchSAM_Mobile" msprop:Generator_RowDeletingName="GetUsedInventorySearchSAM_MobileRowDeleting" msprop:Generator_RowChangingName="GetUsedInventorySearchSAM_MobileRowChanging" msprop:Generator_RowEvHandlerName="GetUsedInventorySearchSAM_MobileRowChangeEventHandler" msprop:Generator_RowDeletedName="GetUsedInventorySearchSAM_MobileRowDeleted" msprop:Generator_RowClassName="GetUsedInventorySearchSAM_MobileRow" msprop:Generator_UserTableName="GetUsedInventorySearchSAM_Mobile" msprop:Generator_RowEvArgName="GetUsedInventorySearchSAM_MobileRowChangeEvent">
+        <xs:element name="GetUsedInventorySearchSAM_Mobile" msprop:Generator_RowClassName="GetUsedInventorySearchSAM_MobileRow" msprop:Generator_RowEvHandlerName="GetUsedInventorySearchSAM_MobileRowChangeEventHandler" msprop:Generator_RowDeletedName="GetUsedInventorySearchSAM_MobileRowDeleted" msprop:Generator_RowDeletingName="GetUsedInventorySearchSAM_MobileRowDeleting" msprop:Generator_RowEvArgName="GetUsedInventorySearchSAM_MobileRowChangeEvent" msprop:Generator_TablePropName="GetUsedInventorySearchSAM_Mobile" msprop:Generator_RowChangedName="GetUsedInventorySearchSAM_MobileRowChanged" msprop:Generator_UserTableName="GetUsedInventorySearchSAM_Mobile" msprop:Generator_RowChangingName="GetUsedInventorySearchSAM_MobileRowChanging" msprop:Generator_TableClassName="GetUsedInventorySearchSAM_MobileDataTable" msprop:Generator_TableVarName="tableGetUsedInventorySearchSAM_Mobile">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="productid" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="productid" msprop:Generator_ColumnVarNameInTable="columnproductid" msprop:Generator_ColumnPropNameInTable="productidColumn" msprop:Generator_UserColumnName="productid" minOccurs="0">
+              <xs:element name="productid" msprop:Generator_ColumnPropNameInTable="productidColumn" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="productid" msprop:Generator_UserColumnName="productid" msprop:Generator_ColumnVarNameInTable="columnproductid" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="5" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="jvpinvno" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="jvpinvno" msprop:Generator_ColumnVarNameInTable="columnjvpinvno" msprop:Generator_ColumnPropNameInTable="jvpinvnoColumn" msprop:Generator_UserColumnName="jvpinvno" minOccurs="0">
+              <xs:element name="jvpinvno" msprop:Generator_ColumnPropNameInTable="jvpinvnoColumn" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="jvpinvno" msprop:Generator_UserColumnName="jvpinvno" msprop:Generator_ColumnVarNameInTable="columnjvpinvno" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="10" />
+                    <xs:maxLength value="30" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="ItemName" msdata:ReadOnly="true" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="ItemName" msprop:Generator_ColumnVarNameInTable="columnItemName" msprop:Generator_ColumnPropNameInTable="ItemNameColumn" msprop:Generator_UserColumnName="ItemName" minOccurs="0">
+              <xs:element name="ItemName" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="ItemNameColumn" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="ItemName" msprop:Generator_UserColumnName="ItemName" msprop:Generator_ColumnVarNameInTable="columnItemName" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="250" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="ItemImageName" msdata:ReadOnly="true" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="ItemImageName" msprop:Generator_ColumnVarNameInTable="columnItemImageName" msprop:Generator_ColumnPropNameInTable="ItemImageNameColumn" msprop:Generator_UserColumnName="ItemImageName" minOccurs="0">
+              <xs:element name="ItemImageName" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="ItemImageNameColumn" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="ItemImageName" msprop:Generator_UserColumnName="ItemImageName" msprop:Generator_ColumnVarNameInTable="columnItemImageName" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="year" msdata:ReadOnly="true" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="year" msprop:Generator_ColumnVarNameInTable="columnyear" msprop:Generator_ColumnPropNameInTable="yearColumn" msprop:Generator_UserColumnName="year" minOccurs="0">
+              <xs:element name="year" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="yearColumn" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="year" msprop:Generator_UserColumnName="year" msprop:Generator_ColumnVarNameInTable="columnyear" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="8000" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="model" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="model" msprop:Generator_ColumnVarNameInTable="columnmodel" msprop:Generator_ColumnPropNameInTable="modelColumn" msprop:Generator_UserColumnName="model" minOccurs="0">
+              <xs:element name="model" msprop:Generator_ColumnPropNameInTable="modelColumn" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="model" msprop:Generator_UserColumnName="model" msprop:Generator_ColumnVarNameInTable="columnmodel" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="20" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="reserved" msprop:Generator_ColumnPropNameInRow="reserved" msprop:Generator_ColumnPropNameInTable="reservedColumn" msprop:Generator_ColumnVarNameInTable="columnreserved" msprop:Generator_UserColumnName="reserved" type="xs:boolean" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

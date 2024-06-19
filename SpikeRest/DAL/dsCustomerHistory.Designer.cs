@@ -665,11 +665,9 @@ namespace SpikeRest.DAL {
                 base.Columns.Add(this.columnEMAILSUBJECT);
                 this.columncstno.MaxLength = 6;
                 this.columntranstype.ReadOnly = true;
-                this.columntranstype.MaxLength = 1;
                 this.columntrans2type.ReadOnly = true;
-                this.columntrans2type.MaxLength = 6;
+                this.columntrans2type.MaxLength = 60;
                 this.columntranstime.ReadOnly = true;
-                this.columntranstime.MaxLength = 1;
                 this.columnthekey.AutoIncrement = true;
                 this.columnthekey.AutoIncrementSeed = -1;
                 this.columnthekey.AutoIncrementStep = -1;
@@ -678,23 +676,21 @@ namespace SpikeRest.DAL {
                 this.columnSLS.ReadOnly = true;
                 this.columnSLS.MaxLength = 50;
                 this.columnfullname.ReadOnly = true;
-                this.columnfullname.MaxLength = 56;
+                this.columnfullname.MaxLength = 200;
                 this.columninvno.MaxLength = 5;
                 this.columnuserprice.ReadOnly = true;
                 this.columnretail.ReadOnly = true;
-                this.columnudf1.MaxLength = 5;
+                this.columnudf1.MaxLength = 500;
                 this.columnappttime.ReadOnly = true;
-                this.columnappttime.MaxLength = 1;
-                this.columnmfg.MaxLength = 6;
+                this.columnappttime.MaxLength = 100;
+                this.columnmfg.MaxLength = 20;
                 this.columnmodel.MaxLength = 20;
                 this.columnnote.ReadOnly = true;
-                this.columnnote.MaxLength = 4000;
                 this.columnDisplayNote.ReadOnly = true;
-                this.columnDisplayNote.MaxLength = 4000;
                 this.columnEMAILADDRESS.ReadOnly = true;
                 this.columnEMAILADDRESS.MaxLength = 1000;
                 this.columnEMAILSUBJECT.ReadOnly = true;
-                this.columnEMAILSUBJECT.MaxLength = 1000;
+                this.columnEMAILSUBJECT.MaxLength = 4000;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

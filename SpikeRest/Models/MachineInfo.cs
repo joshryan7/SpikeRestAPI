@@ -212,5 +212,10 @@ namespace SpikeRest.Models
         [DataMember(Name = "transferassets")]
         public string Transferassets { get; set; }
 
+        [DataMember(Name = "reserved")]
+        public string Reserved { get; set; }
+
+        [DataMember(Name = "bookvalue")]
+        public string Bookvalue { get; set; }
     }
 }

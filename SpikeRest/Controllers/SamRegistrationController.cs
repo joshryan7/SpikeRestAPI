@@ -122,6 +122,85 @@ namespace SpikeRest.Controllers
 
         }
 
+        // delete SAM user account
+        public UserInfo Get(string em, string vendorid, string action)
+        {
+            ConnectionStringSettingsCollection connectionStrings = ConfigurationManager.ConnectionStrings;
+            string cnToUse = "";
+
+            try
+            {
+                foreach (ConnectionStringSettings connection in connectionStrings)
+                {
+                    if (connection.Name == "CRMConnectionString")
+                    {
+                        cnToUse = connection.ConnectionString;
+
+                        break;
+                    }
+
+                }
+
+                /* the stored procedure called in the below code will remove the user record from our CRM database, table int_users, and 
+                 * create a user removal request record so that our back end process will remove the user record from our website 
+                 * database, tables int_user and int_register. 
+                 */
+                SqlCommand cmd = new SqlCommand();
+                SqlConnection cn = new SqlConnection();
+                cn.ConnectionString = cnToUse;
+                cn.Open();
+                cmd.Connection = cn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "SAMUserDelete";
+                cmd.Parameters.Clear();
+
+                cmd.Parameters.Add(new SqlParameter("@email", em));
+                cmd.Parameters.Add(new SqlParameter("@vendorid", Convert.ToInt32(vendorid)));
+
+                SqlParameter output1 = new SqlParameter("@resultValue", SqlDbType.VarChar);
+                output1.Direction = ParameterDirection.Output;
+                output1.Size = 100;
+                cmd.Parameters.Add(output1);
+
+                int nrows = Convert.ToInt32(cmd.ExecuteNonQuery());
+
+                string qresult = output1.Value.ToString();
+                                
+                cmd.Dispose();
+                cn.Close();
+                cn.Dispose();
+
+                return new UserInfo
+                {
+                    Vendorid = "-1",
+                    FirstName = qresult,
+                    LastName = "",
+                    Username = em,
+                    Phone = "",
+                    Email = em,
+                    Lastinvno = "",
+                    Workaddress = "",
+                    Addanasset = ""
+                };
+            }
+            catch { }
+
+
+            return new UserInfo
+            {
+                Vendorid = "-1",
+                FirstName = "",
+                LastName = "",
+                Workaddress = "",
+                Phone = "",
+                Email = "",
+                Lastinvno = "",
+                Username = "",
+                Addanasset = "false"
+            };
+
+        }
+
 
         // validate the email + validation code combination,
         // if valid this method will create the int_users record both on our CRM database and on the it_users database
@@ -131,6 +210,7 @@ namespace SpikeRest.Controllers
             )
         {
             string result = "";
+            string pwd = "";
             ConnectionStringSettingsCollection connectionStrings = ConfigurationManager.ConnectionStrings;
             string cnToUse = "";
 
@@ -171,6 +251,8 @@ namespace SpikeRest.Controllers
 
                     dt = ta.GetDataByUsername(em);
 
+                   
+
                     if(dt.Rows.Count > 0)
                     {
                         // now add the record to the American Eagle / website database table int_users
@@ -178,6 +260,7 @@ namespace SpikeRest.Controllers
                         {
                             this.AddUsertoWebsite(dt[0]);
                             qresult = "success";
+                            pwd = dt[0].pwd.Trim();
                         }
                         catch(Exception e2)
                         {
@@ -196,7 +279,7 @@ namespace SpikeRest.Controllers
                 {
                     Vendorid = "-1",
                     FirstName = qresult,
-                    LastName = "",
+                    LastName = pwd,
                     Username = em,
                     Phone = "",
                     Email = em,

@@ -315,6 +315,8 @@
     <Compile Include="Controllers\AppraisalItemPhotosController.cs" />
     <Compile Include="Controllers\AppraisalItemsController.cs" />
     <Compile Include="Controllers\AppraisalLocationsController.cs" />
+    <Compile Include="Controllers\AppRegistrationController.cs" />
+    <Compile Include="Controllers\AssetController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\claimAssetController.cs" />
     <Compile Include="Controllers\CommissionPaidController.cs" />
@@ -370,6 +372,7 @@
     <Compile Include="Controllers\ShippingItemController.cs" />
     <Compile Include="Controllers\SpikeLoginController.cs" />
     <Compile Include="Controllers\TasksController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Controllers\WantedController.cs" />
     <Compile Include="DAL\dsAllMachines.Designer.cs">
@@ -588,6 +591,7 @@
     <Compile Include="Models\AppraisalItemPhotosInfo.cs" />
     <Compile Include="Models\AppraisalItemsInfo.cs" />
     <Compile Include="Models\AppraisalLocationsInfo.cs" />
+    <Compile Include="Models\App\AppUserInfo.cs" />
     <Compile Include="Models\CategoryInfo.cs" />
     <Compile Include="Models\CommissionPaid.cs" />
     <Compile Include="Models\CommissionsPreInfo.cs" />
@@ -628,6 +632,7 @@
     <Compile Include="Models\RecentsInfo.cs" />
     <Compile Include="Models\SalesOrderApproval.cs" />
     <Compile Include="Models\SalesPlan.cs" />
+    <Compile Include="Models\SAM\asset.cs" />
     <Compile Include="Models\SAM\claimAsset.cs" />
     <Compile Include="Models\SAM\machineSearch.cs" />
     <Compile Include="Models\SettingsInfo.cs" />
@@ -1147,6 +1152,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\AppRegistration\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

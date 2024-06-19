@@ -70,6 +70,7 @@ namespace SpikeRest.Controllers
                 i.Year = dt[x].year;
                 i.ImageMain = dt[x].ItemImageName;
                 i.Jvpinvno = dt[x].jvpinvno.Trim();
+                i.Reserved = dt[x].reserved.ToString();
                 x++;
 
                 machineList.Add(i);

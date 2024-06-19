@@ -44,33 +44,34 @@ namespace SpikeRest.Controllers
                 i.Year = dt[x].year;
                 i.ImageMain = dt[x].ItemImageName;
                 i.Jvpinvno = dt[x].jvpinvno.Trim();
+                i.Reserved = dt[x].reserved.ToString();
 
-            //i.Label1 = dt[x].label1;
-            //i.Label2 = dt[x].label2;
-            //i.Label3 = dt[x].label3;
-            //i.Label4 = dt[x].label4;
-            //i.Label5 = dt[x].label5;
-            //i.Label6 = dt[x].label6;
-            //i.Label7 = dt[x].label7;
-            //i.Label8 = dt[x].label8;
+                //i.Label1 = dt[x].label1;
+                //i.Label2 = dt[x].label2;
+                //i.Label3 = dt[x].label3;
+                //i.Label4 = dt[x].label4;
+                //i.Label5 = dt[x].label5;
+                //i.Label6 = dt[x].label6;
+                //i.Label7 = dt[x].label7;
+                //i.Label8 = dt[x].label8;
 
-            //i.Value1 = dt[x].value1;
-            //i.Value2 = dt[x].value2;
-            //i.Value3 = dt[x].value3;
-            //i.Value4 = dt[x].value4;
-            //i.Value5 = dt[x].value5;
-            //i.Value6 = dt[x].value6;
-            //i.Value7 = dt[x].value7;
-            //i.Value8 = dt[x].value8;
+                //i.Value1 = dt[x].value1;
+                //i.Value2 = dt[x].value2;
+                //i.Value3 = dt[x].value3;
+                //i.Value4 = dt[x].value4;
+                //i.Value5 = dt[x].value5;
+                //i.Value6 = dt[x].value6;
+                //i.Value7 = dt[x].value7;
+                //i.Value8 = dt[x].value8;
 
-            // i.YouTubeVideo = dt[x].youtube_embed;
+                // i.YouTubeVideo = dt[x].youtube_embed;
 
-            // i.HasVideo = dt[x].HasVideo;
-            //i.Model = dt[x].model;
+                // i.HasVideo = dt[x].HasVideo;
+                //i.Model = dt[x].model;
 
 
 
-            machineList.Add(i);
+                machineList.Add(i);
 
                 x++;
 
