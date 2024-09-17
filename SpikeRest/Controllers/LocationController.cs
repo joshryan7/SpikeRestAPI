@@ -56,8 +56,8 @@ namespace SpikeRest.Controllers
                 Samjvp = "",
                 Responsiblesalesman = "",
                 Jvpcode = "",
-                Responsiblesalesmanlong = ""
-                
+                Responsiblesalesmanlong = "",
+                Email = ""
 
             };
         }
@@ -116,7 +116,7 @@ namespace SpikeRest.Controllers
                         l.Responsiblesalesman = dt[i].responsibleSalesman.ToString();
                         l.Jvpcode = dt[i].jvpcode;
                         l.Responsiblesalesmanlong = dt[i].responsibleSalesmanLong;
-
+                        l.Email = dt[i].email;
 
                         locationlist.Add(l);
                         i++;

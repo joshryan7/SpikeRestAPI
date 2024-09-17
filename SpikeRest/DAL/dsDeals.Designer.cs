@@ -562,6 +562,8 @@ namespace SpikeRest.DAL {
             
             private global::System.Data.DataColumn columncustomurl;
             
+            private global::System.Data.DataColumn columncompanylogourl;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public DealsSelectByName_mobileDataTable() {
@@ -1309,6 +1311,14 @@ namespace SpikeRest.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn companylogourlColumn {
+                get {
+                    return this.columncompanylogourl;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1433,7 +1443,8 @@ namespace SpikeRest.DAL {
                         string terms_notes, 
                         string lockinfo, 
                         int modifiedby, 
-                        string customurl) {
+                        string customurl, 
+                        string companylogourl) {
                 DealsSelectByName_mobileRow rowDealsSelectByName_mobileRow = ((DealsSelectByName_mobileRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id,
@@ -1524,7 +1535,8 @@ namespace SpikeRest.DAL {
                         terms_notes,
                         lockinfo,
                         modifiedby,
-                        customurl};
+                        customurl,
+                        companylogourl};
                 rowDealsSelectByName_mobileRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDealsSelectByName_mobileRow);
                 return rowDealsSelectByName_mobileRow;
@@ -1643,6 +1655,7 @@ namespace SpikeRest.DAL {
                 this.columnlockinfo = base.Columns["lockinfo"];
                 this.columnmodifiedby = base.Columns["modifiedby"];
                 this.columncustomurl = base.Columns["customurl"];
+                this.columncompanylogourl = base.Columns["companylogourl"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1826,6 +1839,8 @@ namespace SpikeRest.DAL {
                 base.Columns.Add(this.columnmodifiedby);
                 this.columncustomurl = new global::System.Data.DataColumn("customurl", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncustomurl);
+                this.columncompanylogourl = new global::System.Data.DataColumn("companylogourl", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncompanylogourl);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid}, true));
                 this.columnid.AllowDBNull = false;
@@ -5213,6 +5228,22 @@ namespace SpikeRest.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string companylogourl {
+                get {
+                    if (this.IscompanylogourlNull()) {
+                        return string.Empty;
+                    }
+                    else {
+                        return ((string)(this[this.tableDealsSelectByName_mobile.companylogourlColumn]));
+                    }
+                }
+                set {
+                    this[this.tableDealsSelectByName_mobile.companylogourlColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsdnameNull() {
                 return this.IsNull(this.tableDealsSelectByName_mobile.dnameColumn);
             }
@@ -6265,6 +6296,18 @@ namespace SpikeRest.DAL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetcustomurlNull() {
                 this[this.tableDealsSelectByName_mobile.customurlColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IscompanylogourlNull() {
+                return this.IsNull(this.tableDealsSelectByName_mobile.companylogourlColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetcompanylogourlNull() {
+                this[this.tableDealsSelectByName_mobile.companylogourlColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -8199,6 +8242,7 @@ namespace SpikeRest.DAL.dsDealsTableAdapters {
             tableMapping.ColumnMappings.Add("lockinfo", "lockinfo");
             tableMapping.ColumnMappings.Add("modifiedby", "modifiedby");
             tableMapping.ColumnMappings.Add("customurl", "customurl");
+            tableMapping.ColumnMappings.Add("companylogourl", "companylogourl");
             this._adapter.TableMappings.Add(tableMapping);
         }
         

@@ -4425,6 +4425,8 @@ namespace SpikeRest.DAL {
             
             private global::System.Data.DataColumn columnbookvalue;
             
+            private global::System.Data.DataColumn columnLCODE;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public GetUsedInventoryItem_MobileDataTable() {
@@ -5092,6 +5094,14 @@ namespace SpikeRest.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn LCODEColumn {
+                get {
+                    return this.columnLCODE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -5206,7 +5216,8 @@ namespace SpikeRest.DAL {
                         bool euros, 
                         int responsibleSalesmanId1, 
                         bool reserved, 
-                        string bookvalue) {
+                        string bookvalue, 
+                        string LCODE) {
                 GetUsedInventoryItem_MobileRow rowGetUsedInventoryItem_MobileRow = ((GetUsedInventoryItem_MobileRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         invno,
@@ -5287,7 +5298,8 @@ namespace SpikeRest.DAL {
                         euros,
                         responsibleSalesmanId1,
                         reserved,
-                        bookvalue};
+                        bookvalue,
+                        LCODE};
                 rowGetUsedInventoryItem_MobileRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowGetUsedInventoryItem_MobileRow);
                 return rowGetUsedInventoryItem_MobileRow;
@@ -5389,6 +5401,7 @@ namespace SpikeRest.DAL {
                 this.columnresponsibleSalesmanId = base.Columns["responsibleSalesmanId"];
                 this.columnreserved = base.Columns["reserved"];
                 this.columnbookvalue = base.Columns["bookvalue"];
+                this.columnLCODE = base.Columns["LCODE"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5552,6 +5565,8 @@ namespace SpikeRest.DAL {
                 base.Columns.Add(this.columnreserved);
                 this.columnbookvalue = new global::System.Data.DataColumn("bookvalue", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnbookvalue);
+                this.columnLCODE = new global::System.Data.DataColumn("LCODE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLCODE);
                 this.columninvno.Caption = "productid";
                 this.columninvno.MaxLength = 10;
                 this.columnItemName.ReadOnly = true;
@@ -13465,6 +13480,22 @@ namespace SpikeRest.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string LCODE {
+                get {
+                    if (this.IsLCODENull()) {
+                        return string.Empty;
+                    }
+                    else {
+                        return ((string)(this[this.tableGetUsedInventoryItem_Mobile.LCODEColumn]));
+                    }
+                }
+                set {
+                    this[this.tableGetUsedInventoryItem_Mobile.LCODEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsinvnoNull() {
                 return this.IsNull(this.tableGetUsedInventoryItem_Mobile.invnoColumn);
             }
@@ -14410,6 +14441,18 @@ namespace SpikeRest.DAL {
             public void SetbookvalueNull() {
                 this[this.tableGetUsedInventoryItem_Mobile.bookvalueColumn] = global::System.Convert.DBNull;
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsLCODENull() {
+                return this.IsNull(this.tableGetUsedInventoryItem_Mobile.LCODEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetLCODENull() {
+                this[this.tableGetUsedInventoryItem_Mobile.LCODEColumn] = global::System.Convert.DBNull;
+            }
         }
         
         /// <summary>
@@ -15091,6 +15134,7 @@ namespace SpikeRest.DAL.dsMachineTableAdapters {
             tableMapping.ColumnMappings.Add("Sqft", "sqft");
             tableMapping.ColumnMappings.Add("reserved", "reserved");
             tableMapping.ColumnMappings.Add("bookvalue", "bookvalue");
+            tableMapping.ColumnMappings.Add("location", "LCODE");
             this._adapter.TableMappings.Add(tableMapping);
         }
         

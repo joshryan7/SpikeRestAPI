@@ -48,8 +48,8 @@ namespace SpikeRest.Controllers
                 Dsubtype = "",
                 Webshowin = "",
                 Showonwebsite = "",
-                NoFollowuprequired = ""
-                
+                NoFollowuprequired = "",
+                Companylogourl = ""
             };
         }
 
@@ -97,6 +97,7 @@ namespace SpikeRest.Controllers
                     d.City = dt[i].city;
                     d.Companylogo = dt[i].CompanyLogo;
                     d.Customurl = dt[i].customurl;
+                    d.Companylogourl = dt[i].companylogourl;
 
                     //D
 

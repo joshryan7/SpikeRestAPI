@@ -351,6 +351,8 @@ namespace SpikeRest.DAL {
             
             private global::System.Data.DataColumn columnresponsibleSalesmanLong;
             
+            private global::System.Data.DataColumn columnemail;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public LocationSelect_MobileDataTable() {
@@ -674,6 +676,14 @@ namespace SpikeRest.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn emailColumn {
+                get {
+                    return this.columnemail;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -745,7 +755,8 @@ namespace SpikeRest.DAL {
                         string SAMJVP, 
                         int responsibleSalesman, 
                         string jvpcode, 
-                        string responsibleSalesmanLong) {
+                        string responsibleSalesmanLong, 
+                        string email) {
                 LocationSelect_MobileRow rowLocationSelect_MobileRow = ((LocationSelect_MobileRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID,
@@ -783,7 +794,8 @@ namespace SpikeRest.DAL {
                         SAMJVP,
                         responsibleSalesman,
                         jvpcode,
-                        responsibleSalesmanLong};
+                        responsibleSalesmanLong,
+                        email};
                 rowLocationSelect_MobileRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowLocationSelect_MobileRow);
                 return rowLocationSelect_MobileRow;
@@ -849,6 +861,7 @@ namespace SpikeRest.DAL {
                 this.columnresponsibleSalesman = base.Columns["responsibleSalesman"];
                 this.columnjvpcode = base.Columns["jvpcode"];
                 this.columnresponsibleSalesmanLong = base.Columns["responsibleSalesmanLong"];
+                this.columnemail = base.Columns["email"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -926,6 +939,8 @@ namespace SpikeRest.DAL {
                 base.Columns.Add(this.columnjvpcode);
                 this.columnresponsibleSalesmanLong = new global::System.Data.DataColumn("responsibleSalesmanLong", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnresponsibleSalesmanLong);
+                this.columnemail = new global::System.Data.DataColumn("email", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnemail);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
                 this.columnID.AllowDBNull = false;
@@ -1675,6 +1690,22 @@ namespace SpikeRest.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string email {
+                get {
+                    if (this.IsemailNull()) {
+                        return string.Empty;
+                    }
+                    else {
+                        return ((string)(this[this.tableLocationSelect_Mobile.emailColumn]));
+                    }
+                }
+                set {
+                    this[this.tableLocationSelect_Mobile.emailColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsLCODENull() {
                 return this.IsNull(this.tableLocationSelect_Mobile.LCODEColumn);
             }
@@ -2092,6 +2123,18 @@ namespace SpikeRest.DAL {
             public void SetresponsibleSalesmanLongNull() {
                 this[this.tableLocationSelect_Mobile.responsibleSalesmanLongColumn] = global::System.Convert.DBNull;
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsemailNull() {
+                return this.IsNull(this.tableLocationSelect_Mobile.emailColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetemailNull() {
+                this[this.tableLocationSelect_Mobile.emailColumn] = global::System.Convert.DBNull;
+            }
         }
         
         /// <summary>
@@ -2289,6 +2332,7 @@ namespace SpikeRest.DAL.dsLocationTableAdapters {
             tableMapping.ColumnMappings.Add("responsibleSalesman", "responsibleSalesman");
             tableMapping.ColumnMappings.Add("jvpcode", "jvpcode");
             tableMapping.ColumnMappings.Add("responsibleSalesmanLong", "responsibleSalesmanLong");
+            tableMapping.ColumnMappings.Add("email", "email");
             this._adapter.TableMappings.Add(tableMapping);
         }
         

@@ -107,6 +107,7 @@ namespace SpikeRest.Controllers
             string _transferassets = "";
             string _reserved = "";
             string _bookvalue = "";
+            string _lcode = "";
 
             dt = ta.GetDataByInvno(invno, userid, "");
             
@@ -203,7 +204,7 @@ namespace SpikeRest.Controllers
                 _transferassets = dt[0].transferassets;
                 _reserved = dt[0].reserved.ToString();
                 _bookvalue = dt[0].bookvalue;
-
+                _lcode = dt[0].LCODE;
 
                 try
                 {
@@ -316,8 +317,8 @@ namespace SpikeRest.Controllers
                 Assetcontactphone = _assetcontactphone,
                 Transferassets = _transferassets,
                 Reserved = _reserved,
-                Bookvalue = _bookvalue
-                
+                Bookvalue = _bookvalue,
+                Lcode = _lcode
                 //Transferamount = "12345",
                 //Transfernote = "Hello"
 
@@ -425,7 +426,7 @@ namespace SpikeRest.Controllers
             string _transferassets = "";
             string _reserved = "";
             string _bookvalue = "";
-
+            string _lcode = "";
             // calls stored procedure GetUsedInventoryItem_Mobile
             dt = ta.GetDataByInvno(invno, 0 , useremail);
 
@@ -522,7 +523,7 @@ namespace SpikeRest.Controllers
                 _transferassets = dt[0].transferassets;
                 _reserved = dt[0].reserved.ToString();
                 _bookvalue = dt[0].bookvalue;
-
+                _lcode = dt[0].LCODE;
                 try
                 {
                     if (dt[0].euros == true)
@@ -634,8 +635,9 @@ namespace SpikeRest.Controllers
                 Assetcontactphone = _assetcontactphone,
                 Transferassets = _transferassets,
                 Reserved = _reserved,
-                Bookvalue = _bookvalue
-
+                Bookvalue = _bookvalue,
+                Lcode = _lcode
+             
                 //Transferamount = "12345",
                 //Transfernote = "Hello"
 

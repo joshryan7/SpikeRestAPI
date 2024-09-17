@@ -301,7 +301,10 @@ namespace SpikeRest.Models
         [DataMember(Name = "zip")]
         public string Zip { get; set; }
 
-      
+        [DataMember(Name = "companylogourl")]
+        public string Companylogourl { get; set; }
+
+
         //[DataMember(Name = "oninternet")]
         //public int oninternet { get; set; }
 

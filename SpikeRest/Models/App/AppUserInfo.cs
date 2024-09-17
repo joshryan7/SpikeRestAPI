@@ -43,6 +43,10 @@ namespace SpikeRest.Models.App
         [DataMember(Name = "phone")]
         public string Phone { get; set; }
 
+        [DataMember(Name = "pglcontact")]
+        public string Pglcontact { get; set; }
 
+        [DataMember(Name = "company")]
+        public string Company { get; set; }
     }
 }

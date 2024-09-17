@@ -217,5 +217,8 @@ namespace SpikeRest.Models
 
         [DataMember(Name = "bookvalue")]
         public string Bookvalue { get; set; }
+
+        [DataMember(Name = "lcode")]
+        public string Lcode { get; set; }
     }
 }

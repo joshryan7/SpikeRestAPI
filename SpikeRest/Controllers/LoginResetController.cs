@@ -10,7 +10,7 @@ using System.Data.SqlClient;
 using System.Configuration;
 using System.Data;
 using System.IO;
-
+using SpikeRest.Models.App;
 
 namespace SpikeRest.Controllers
 {
@@ -119,6 +119,87 @@ namespace SpikeRest.Controllers
 
         }
 
+        // call this method to request a password reset
+        public AppUserInfo Get(string useremail, string source, string d1, string d2)
+        {
+            ConnectionStringSettingsCollection connectionStrings = ConfigurationManager.ConnectionStrings;
+            string cnToUse = "";
+
+            try
+            {
+                foreach (ConnectionStringSettings connection in connectionStrings)
+                {
+                    if (connection.Name == "CRMConnectionString")
+                    {
+                        cnToUse = connection.ConnectionString;
+
+                        break;
+                    }
+
+                }
+
+                SqlCommand cmd = new SqlCommand();
+                SqlConnection cn = new SqlConnection();
+                cn.ConnectionString = cnToUse;
+                cn.Open();
+                cmd.Connection = cn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "SellMachineryPasswordResetRequest_Insert";
+                cmd.Parameters.Clear();
+
+                cmd.Parameters.Add(new SqlParameter("@useremail", useremail));
+
+                int nrows = Convert.ToInt32(cmd.ExecuteNonQuery());
+
+                cmd.Dispose();
+                cn.Close();
+                cn.Dispose();
+
+                // get the user's record to return to the Sell Machinery app, as it uses the info for
+                // validation
+                
+                dsAppUsers.AppUserLoginDataTable dt = new dsAppUsers.AppUserLoginDataTable();
+                SpikeRest.DAL.dsAppUsersTableAdapters.AppUserLoginTableAdapter ta = new DAL.dsAppUsersTableAdapters.AppUserLoginTableAdapter();    
+
+                dt = ta.GetData(useremail,"hockey23csharp01");
+                if (dt.Rows.Count > 0)
+                {
+                    return new AppUserInfo
+                    {
+
+                        Id = dt[0].id.ToString(),
+                        Email = dt[0].email,
+                        Password = dt[0].password,
+                        Fname = dt[0].fname,
+                        Lname = dt[0].lname,
+                        Firstuse = dt[0].firstuse.ToString(),
+                        Phone = dt[0].phone,
+                        Pglcontact = dt[0].pglcontact,
+                        Company = dt[0].company
+                    };
+                }
+            }
+            catch
+            {
+
+            }
+
+            return new AppUserInfo
+            {
+                Id = "-1",
+                Email = "",
+                Password = "",
+                Fname = "",
+                Lname = "",
+                Firstuse = "",
+                Phone = "",
+                Pglcontact = "",
+                Company = ""
+            };
+
+
+        }
+
 
         // call this method to validate the reset code
         public UserInfo Get(string useremail, string vcode)
@@ -167,10 +248,13 @@ namespace SpikeRest.Controllers
             ConnectionStringSettingsCollection connectionStrings = ConfigurationManager.ConnectionStrings;
             string pglConnection = "";
             string webConnection = "";
+            string webConnection2 = "Data Source=perfection-global-sql-server.c34i86q46b3g.us-east-2.rds.amazonaws.com;Initial Catalog=CRM;User ID=admin;Password=oWwK9wSvdw77uAib&6d6HvnoxF&#dfq8MKo9i9bycSBGk#NYmJCopT!!JV9qBP4fN#&Q%pw6YrXXB4TTLTR9ds&n7szKfK8dcBjAcCKHKukpzq";
+
 
             string qresultpgl = "";
             string qresultWeb = "";
-            
+            string qresultWeb2 = "";
+
 
             try
             {
@@ -185,6 +269,8 @@ namespace SpikeRest.Controllers
                         webConnection = connection.ConnectionString;
                     }
                 }
+
+                
 
                 SqlCommand cmd = new SqlCommand();
                 SqlConnection cn = new SqlConnection();
@@ -239,6 +325,37 @@ namespace SpikeRest.Controllers
                     cmdWeb.Dispose();
                     cnWeb.Close();
                     cnWeb.Dispose();
+
+                    if (qresultWeb == "success") 
+                    {
+                        SqlCommand cmdWeb2 = new SqlCommand();
+                        SqlConnection cnWeb2 = new SqlConnection();
+                        cnWeb2.ConnectionString = webConnection2;
+                        cnWeb2.Open();
+
+                        cmdWeb2.Connection = cnWeb2;
+                        cmdWeb2.CommandType = CommandType.StoredProcedure;
+                        cmdWeb2.CommandText = "PasswordSAM_Update";
+                        cmdWeb2.Parameters.Clear();
+
+                        /* However, the website database is not aware of the validation code, thus we use this special code 8675309 so that the update works
+                         */
+
+                        cmdWeb2.Parameters.Add(new SqlParameter("@useremail", useremail));
+                        cmdWeb2.Parameters.Add(new SqlParameter("@newpassword", np));
+                        cmdWeb2.Parameters.Add(new SqlParameter("@validationcode", "8675309"));
+
+                        qresultWeb2 = cmdWeb2.ExecuteScalar().ToString();
+                        if (qresultWeb2 == "1")
+                        {
+                            qresultWeb2 = "success";
+                        }
+
+                        cmdWeb2.Dispose();
+                        cnWeb2.Close();
+                        cnWeb2.Dispose();
+
+                    }
                 }
 
                 // get the user's record to return to the SAM app, as it uses the info for

@@ -116,5 +116,8 @@ namespace SpikeRest.Models
 
         [DataMember(Name = "responsiblesalesmanlong")]
         public string Responsiblesalesmanlong { get; set; }
+
+        [DataMember(Name = "email")]
+        public string Email { get; set; }
     }
 }

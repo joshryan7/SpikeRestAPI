@@ -316,6 +316,7 @@
     <Compile Include="Controllers\AppraisalItemsController.cs" />
     <Compile Include="Controllers\AppraisalLocationsController.cs" />
     <Compile Include="Controllers\AppRegistrationController.cs" />
+    <Compile Include="Controllers\AppUsersController.cs" />
     <Compile Include="Controllers\AssetController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\claimAssetController.cs" />
@@ -361,12 +362,15 @@
     <Compile Include="Controllers\MTPController.cs" />
     <Compile Include="Controllers\OneLinersController.cs" />
     <Compile Include="Controllers\PhotoController.cs" />
+    <Compile Include="Controllers\PhotopassController.cs" />
     <Compile Include="Controllers\QuoteController.cs" />
     <Compile Include="Controllers\RecentsController.cs" />
     <Compile Include="Controllers\SalesOrderApprovalController.cs" />
     <Compile Include="Controllers\SalesPlanController.cs" />
     <Compile Include="Controllers\SAMMachineSearchController.cs" />
+    <Compile Include="Controllers\samPhotoController.cs" />
     <Compile Include="Controllers\SamRegistrationController.cs" />
+    <Compile Include="Controllers\sellMachineController.cs" />
     <Compile Include="Controllers\SettingsController.cs" />
     <Compile Include="Controllers\ShippingController.cs" />
     <Compile Include="Controllers\ShippingItemController.cs" />
@@ -404,6 +408,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsAppraisals.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\dsAppUsers.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsAppUsers.xsd</DependentUpon>
     </Compile>
     <Compile Include="DAL\dsCategory.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -635,6 +644,7 @@
     <Compile Include="Models\SAM\asset.cs" />
     <Compile Include="Models\SAM\claimAsset.cs" />
     <Compile Include="Models\SAM\machineSearch.cs" />
+    <Compile Include="Models\SellMachineInfo.cs" />
     <Compile Include="Models\SettingsInfo.cs" />
     <Compile Include="Models\ShipInfo.cs" />
     <Compile Include="Models\ShipItemInfo.cs" />
@@ -746,6 +756,17 @@
     </None>
     <Content Include="DAL\dsAppraisals.xss">
       <DependentUpon>dsAppraisals.xsd</DependentUpon>
+    </Content>
+    <Content Include="DAL\dsAppUsers.xsc">
+      <DependentUpon>dsAppUsers.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\dsAppUsers.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsAppUsers.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DAL\dsAppUsers.xss">
+      <DependentUpon>dsAppUsers.xsd</DependentUpon>
     </Content>
     <None Include="DAL\dsCategory.xsd">
       <SubType>Designer</SubType>
@@ -1153,6 +1174,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\AppRegistration\" />
+    <Folder Include="Views\sellMachine\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

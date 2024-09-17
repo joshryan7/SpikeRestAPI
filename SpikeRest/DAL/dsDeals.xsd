@@ -114,6 +114,7 @@
               <Mapping SourceColumn="lockinfo" DataSetColumn="lockinfo" />
               <Mapping SourceColumn="modifiedby" DataSetColumn="modifiedby" />
               <Mapping SourceColumn="customurl" DataSetColumn="customurl" />
+              <Mapping SourceColumn="companylogourl" DataSetColumn="companylogourl" />
             </Mappings>
             <Sources>
               <DbSource ConnectionRef="CRMConnectionString (Web.config)" DbObjectName="CRM.dbo.DealsSelectById_mobile" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
@@ -274,13 +275,13 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="dsDeals" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="dsDeals" msprop:Generator_DataSetName="dsDeals">
+  <xs:element name="dsDeals" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsDeals" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsDeals">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="DealsSelectByName_mobile" msprop:Generator_RowEvHandlerName="DealsSelectByName_mobileRowChangeEventHandler" msprop:Generator_RowDeletedName="DealsSelectByName_mobileRowDeleted" msprop:Generator_RowDeletingName="DealsSelectByName_mobileRowDeleting" msprop:Generator_RowEvArgName="DealsSelectByName_mobileRowChangeEvent" msprop:Generator_TablePropName="DealsSelectByName_mobile" msprop:Generator_RowChangedName="DealsSelectByName_mobileRowChanged" msprop:Generator_RowChangingName="DealsSelectByName_mobileRowChanging" msprop:Generator_TableClassName="DealsSelectByName_mobileDataTable" msprop:Generator_RowClassName="DealsSelectByName_mobileRow" msprop:Generator_TableVarName="tableDealsSelectByName_mobile" msprop:Generator_UserTableName="DealsSelectByName_mobile">
+        <xs:element name="DealsSelectByName_mobile" msprop:Generator_RowClassName="DealsSelectByName_mobileRow" msprop:Generator_RowEvHandlerName="DealsSelectByName_mobileRowChangeEventHandler" msprop:Generator_RowDeletedName="DealsSelectByName_mobileRowDeleted" msprop:Generator_RowDeletingName="DealsSelectByName_mobileRowDeleting" msprop:Generator_RowEvArgName="DealsSelectByName_mobileRowChangeEvent" msprop:Generator_TablePropName="DealsSelectByName_mobile" msprop:Generator_RowChangedName="DealsSelectByName_mobileRowChanged" msprop:Generator_UserTableName="DealsSelectByName_mobile" msprop:Generator_RowChangingName="DealsSelectByName_mobileRowChanging" msprop:Generator_TableClassName="DealsSelectByName_mobileDataTable" msprop:Generator_TableVarName="tableDealsSelectByName_mobile">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="id" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="id" msprop:Generator_UserColumnName="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnVarNameInTable="columnid" type="xs:int" />
               <xs:element name="dname" msprop:Generator_ColumnPropNameInTable="dnameColumn" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="dname" msprop:Generator_UserColumnName="dname" msprop:Generator_ColumnVarNameInTable="columndname" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -330,7 +331,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="dcontact" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="dcontact" msprop:Generator_ColumnPropNameInTable="dcontactColumn" msprop:Generator_ColumnVarNameInTable="columndcontact" msprop:Generator_UserColumnName="dcontact" type="xs:int" minOccurs="0" />
+              <xs:element name="dcontact" msdata:ReadOnly="true" msprop:Generator_UserColumnName="dcontact" msprop:Generator_ColumnPropNameInTable="dcontactColumn" msprop:Generator_ColumnPropNameInRow="dcontact" msprop:Generator_ColumnVarNameInTable="columndcontact" type="xs:int" minOccurs="0" />
               <xs:element name="dContactFull" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="dContactFullColumn" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="dContactFull" msprop:Generator_UserColumnName="dContactFull" msprop:Generator_ColumnVarNameInTable="columndContactFull" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -422,9 +423,9 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="BuyerPremium" msprop:Generator_ColumnPropNameInRow="BuyerPremium" msprop:Generator_ColumnPropNameInTable="BuyerPremiumColumn" msprop:Generator_ColumnVarNameInTable="columnBuyerPremium" msprop:Generator_UserColumnName="BuyerPremium" type="xs:float" minOccurs="0" />
-              <xs:element name="dvalue" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="dvalue" msprop:Generator_ColumnPropNameInTable="dvalueColumn" msprop:Generator_ColumnVarNameInTable="columndvalue" msprop:Generator_UserColumnName="dvalue" type="xs:float" minOccurs="0" />
-              <xs:element name="AppraisedBy" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="AppraisedBy" msprop:Generator_ColumnPropNameInTable="AppraisedByColumn" msprop:Generator_ColumnVarNameInTable="columnAppraisedBy" msprop:Generator_UserColumnName="AppraisedBy" type="xs:int" minOccurs="0" />
+              <xs:element name="BuyerPremium" msprop:Generator_UserColumnName="BuyerPremium" msprop:Generator_ColumnPropNameInTable="BuyerPremiumColumn" msprop:Generator_ColumnPropNameInRow="BuyerPremium" msprop:Generator_ColumnVarNameInTable="columnBuyerPremium" type="xs:float" minOccurs="0" />
+              <xs:element name="dvalue" msdata:ReadOnly="true" msprop:Generator_UserColumnName="dvalue" msprop:Generator_ColumnPropNameInTable="dvalueColumn" msprop:Generator_ColumnPropNameInRow="dvalue" msprop:Generator_ColumnVarNameInTable="columndvalue" type="xs:float" minOccurs="0" />
+              <xs:element name="AppraisedBy" msdata:ReadOnly="true" msprop:Generator_UserColumnName="AppraisedBy" msprop:Generator_ColumnPropNameInTable="AppraisedByColumn" msprop:Generator_ColumnPropNameInRow="AppraisedBy" msprop:Generator_ColumnVarNameInTable="columnAppraisedBy" type="xs:int" minOccurs="0" />
               <xs:element name="AppraisedByFull" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="AppraisedByFullColumn" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="AppraisedByFull" msprop:Generator_UserColumnName="AppraisedByFull" msprop:Generator_ColumnVarNameInTable="columnAppraisedByFull" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -432,7 +433,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="AuctionStartDate" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="AuctionStartDate" msprop:Generator_ColumnPropNameInTable="AuctionStartDateColumn" msprop:Generator_ColumnVarNameInTable="columnAuctionStartDate" msprop:Generator_UserColumnName="AuctionStartDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="AuctionStartDate" msdata:ReadOnly="true" msprop:Generator_UserColumnName="AuctionStartDate" msprop:Generator_ColumnPropNameInTable="AuctionStartDateColumn" msprop:Generator_ColumnPropNameInRow="AuctionStartDate" msprop:Generator_ColumnVarNameInTable="columnAuctionStartDate" type="xs:dateTime" minOccurs="0" />
               <xs:element name="auctionStartTime" msprop:Generator_ColumnPropNameInTable="auctionStartTimeColumn" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="auctionStartTime" msprop:Generator_UserColumnName="auctionStartTime" msprop:Generator_ColumnVarNameInTable="columnauctionStartTime" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -440,7 +441,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="AuctionCloseDate" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="AuctionCloseDate" msprop:Generator_ColumnPropNameInTable="AuctionCloseDateColumn" msprop:Generator_ColumnVarNameInTable="columnAuctionCloseDate" msprop:Generator_UserColumnName="AuctionCloseDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="AuctionCloseDate" msdata:ReadOnly="true" msprop:Generator_UserColumnName="AuctionCloseDate" msprop:Generator_ColumnPropNameInTable="AuctionCloseDateColumn" msprop:Generator_ColumnPropNameInRow="AuctionCloseDate" msprop:Generator_ColumnVarNameInTable="columnAuctionCloseDate" type="xs:dateTime" minOccurs="0" />
               <xs:element name="AuctionCloseTime" msprop:Generator_ColumnPropNameInTable="AuctionCloseTimeColumn" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="AuctionCloseTime" msprop:Generator_UserColumnName="AuctionCloseTime" msprop:Generator_ColumnVarNameInTable="columnAuctionCloseTime" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -455,7 +456,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="NoLongerForSale" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="NoLongerForSale" msprop:Generator_ColumnPropNameInTable="NoLongerForSaleColumn" msprop:Generator_ColumnVarNameInTable="columnNoLongerForSale" msprop:Generator_UserColumnName="NoLongerForSale" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="NoLongerForSale" msdata:ReadOnly="true" msprop:Generator_UserColumnName="NoLongerForSale" msprop:Generator_ColumnPropNameInTable="NoLongerForSaleColumn" msprop:Generator_ColumnPropNameInRow="NoLongerForSale" msprop:Generator_ColumnVarNameInTable="columnNoLongerForSale" type="xs:dateTime" minOccurs="0" />
               <xs:element name="QuoteVerbiage" msprop:Generator_ColumnPropNameInTable="QuoteVerbiageColumn" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="QuoteVerbiage" msprop:Generator_UserColumnName="QuoteVerbiage" msprop:Generator_ColumnVarNameInTable="columnQuoteVerbiage" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -484,8 +485,8 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="DateFound" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="DateFound" msprop:Generator_ColumnPropNameInTable="DateFoundColumn" msprop:Generator_ColumnVarNameInTable="columnDateFound" msprop:Generator_UserColumnName="DateFound" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="FoundBy" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="FoundBy" msprop:Generator_ColumnPropNameInTable="FoundByColumn" msprop:Generator_ColumnVarNameInTable="columnFoundBy" msprop:Generator_UserColumnName="FoundBy" type="xs:int" minOccurs="0" />
+              <xs:element name="DateFound" msdata:ReadOnly="true" msprop:Generator_UserColumnName="DateFound" msprop:Generator_ColumnPropNameInTable="DateFoundColumn" msprop:Generator_ColumnPropNameInRow="DateFound" msprop:Generator_ColumnVarNameInTable="columnDateFound" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FoundBy" msdata:ReadOnly="true" msprop:Generator_UserColumnName="FoundBy" msprop:Generator_ColumnPropNameInTable="FoundByColumn" msprop:Generator_ColumnPropNameInRow="FoundBy" msprop:Generator_ColumnVarNameInTable="columnFoundBy" type="xs:int" minOccurs="0" />
               <xs:element name="FoundByFull" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="FoundByFullColumn" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="FoundByFull" msprop:Generator_UserColumnName="FoundByFull" msprop:Generator_ColumnVarNameInTable="columnFoundByFull" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -507,9 +508,9 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="FinderCommission" msprop:Generator_ColumnPropNameInRow="FinderCommission" msprop:Generator_ColumnPropNameInTable="FinderCommissionColumn" msprop:Generator_ColumnVarNameInTable="columnFinderCommission" msprop:Generator_UserColumnName="FinderCommission" type="xs:float" minOccurs="0" />
-              <xs:element name="SellerCommission" msprop:Generator_ColumnPropNameInRow="SellerCommission" msprop:Generator_ColumnPropNameInTable="SellerCommissionColumn" msprop:Generator_ColumnVarNameInTable="columnSellerCommission" msprop:Generator_UserColumnName="SellerCommission" type="xs:float" minOccurs="0" />
-              <xs:element name="EquipmentRemoval" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="EquipmentRemoval" msprop:Generator_ColumnPropNameInTable="EquipmentRemovalColumn" msprop:Generator_ColumnVarNameInTable="columnEquipmentRemoval" msprop:Generator_UserColumnName="EquipmentRemoval" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FinderCommission" msprop:Generator_UserColumnName="FinderCommission" msprop:Generator_ColumnPropNameInTable="FinderCommissionColumn" msprop:Generator_ColumnPropNameInRow="FinderCommission" msprop:Generator_ColumnVarNameInTable="columnFinderCommission" type="xs:float" minOccurs="0" />
+              <xs:element name="SellerCommission" msprop:Generator_UserColumnName="SellerCommission" msprop:Generator_ColumnPropNameInTable="SellerCommissionColumn" msprop:Generator_ColumnPropNameInRow="SellerCommission" msprop:Generator_ColumnVarNameInTable="columnSellerCommission" type="xs:float" minOccurs="0" />
+              <xs:element name="EquipmentRemoval" msdata:ReadOnly="true" msprop:Generator_UserColumnName="EquipmentRemoval" msprop:Generator_ColumnPropNameInTable="EquipmentRemovalColumn" msprop:Generator_ColumnPropNameInRow="EquipmentRemoval" msprop:Generator_ColumnVarNameInTable="columnEquipmentRemoval" type="xs:dateTime" minOccurs="0" />
               <xs:element name="SiteContactInfo" msprop:Generator_ColumnPropNameInTable="SiteContactInfoColumn" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="SiteContactInfo" msprop:Generator_UserColumnName="SiteContactInfo" msprop:Generator_ColumnVarNameInTable="columnSiteContactInfo" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -559,7 +560,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="SubmitByDate" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="SubmitByDate" msprop:Generator_ColumnPropNameInTable="SubmitByDateColumn" msprop:Generator_ColumnVarNameInTable="columnSubmitByDate" msprop:Generator_UserColumnName="SubmitByDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SubmitByDate" msdata:ReadOnly="true" msprop:Generator_UserColumnName="SubmitByDate" msprop:Generator_ColumnPropNameInTable="SubmitByDateColumn" msprop:Generator_ColumnPropNameInRow="SubmitByDate" msprop:Generator_ColumnVarNameInTable="columnSubmitByDate" type="xs:dateTime" minOccurs="0" />
               <xs:element name="SubmitByTime" msprop:Generator_ColumnPropNameInTable="SubmitByTimeColumn" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="SubmitByTime" msprop:Generator_UserColumnName="SubmitByTime" msprop:Generator_ColumnVarNameInTable="columnSubmitByTime" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -567,7 +568,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="AppointmentDate" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="AppointmentDate" msprop:Generator_ColumnPropNameInTable="AppointmentDateColumn" msprop:Generator_ColumnVarNameInTable="columnAppointmentDate" msprop:Generator_UserColumnName="AppointmentDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="AppointmentDate" msdata:ReadOnly="true" msprop:Generator_UserColumnName="AppointmentDate" msprop:Generator_ColumnPropNameInTable="AppointmentDateColumn" msprop:Generator_ColumnPropNameInRow="AppointmentDate" msprop:Generator_ColumnVarNameInTable="columnAppointmentDate" type="xs:dateTime" minOccurs="0" />
               <xs:element name="AppointmentTime" msprop:Generator_ColumnPropNameInTable="AppointmentTimeColumn" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="AppointmentTime" msprop:Generator_UserColumnName="AppointmentTime" msprop:Generator_ColumnVarNameInTable="columnAppointmentTime" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -575,7 +576,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="addedby" msprop:Generator_ColumnPropNameInRow="addedby" msprop:Generator_ColumnPropNameInTable="addedbyColumn" msprop:Generator_ColumnVarNameInTable="columnaddedby" msprop:Generator_UserColumnName="addedby" type="xs:int" minOccurs="0" />
+              <xs:element name="addedby" msprop:Generator_UserColumnName="addedby" msprop:Generator_ColumnPropNameInTable="addedbyColumn" msprop:Generator_ColumnPropNameInRow="addedby" msprop:Generator_ColumnVarNameInTable="columnaddedby" type="xs:int" minOccurs="0" />
               <xs:element name="InternetDescription" msprop:Generator_ColumnPropNameInTable="InternetDescriptionColumn" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="InternetDescription" msprop:Generator_UserColumnName="InternetDescription" msprop:Generator_ColumnVarNameInTable="columnInternetDescription" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -611,7 +612,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="OnInternet" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="OnInternet" msprop:Generator_ColumnPropNameInTable="OnInternetColumn" msprop:Generator_ColumnVarNameInTable="columnOnInternet" msprop:Generator_UserColumnName="OnInternet" type="xs:int" minOccurs="0" />
+              <xs:element name="OnInternet" msdata:ReadOnly="true" msprop:Generator_UserColumnName="OnInternet" msprop:Generator_ColumnPropNameInTable="OnInternetColumn" msprop:Generator_ColumnPropNameInRow="OnInternet" msprop:Generator_ColumnVarNameInTable="columnOnInternet" type="xs:int" minOccurs="0" />
               <xs:element name="InternetDisplayOrder" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="InternetDisplayOrderColumn" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="InternetDisplayOrder" msprop:Generator_UserColumnName="InternetDisplayOrder" msprop:Generator_ColumnVarNameInTable="columnInternetDisplayOrder" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -619,7 +620,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="InternetDisplayOrderNumeric" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="InternetDisplayOrderNumeric" msprop:Generator_ColumnPropNameInTable="InternetDisplayOrderNumericColumn" msprop:Generator_ColumnVarNameInTable="columnInternetDisplayOrderNumeric" msprop:Generator_UserColumnName="InternetDisplayOrderNumeric" type="xs:int" minOccurs="0" />
+              <xs:element name="InternetDisplayOrderNumeric" msdata:ReadOnly="true" msprop:Generator_UserColumnName="InternetDisplayOrderNumeric" msprop:Generator_ColumnPropNameInTable="InternetDisplayOrderNumericColumn" msprop:Generator_ColumnPropNameInRow="InternetDisplayOrderNumeric" msprop:Generator_ColumnVarNameInTable="columnInternetDisplayOrderNumeric" type="xs:int" minOccurs="0" />
               <xs:element name="dateadded" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="dateaddedColumn" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="dateadded" msprop:Generator_UserColumnName="dateadded" msprop:Generator_ColumnVarNameInTable="columndateadded" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -634,7 +635,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="NoFollowUp" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="NoFollowUp" msprop:Generator_ColumnPropNameInTable="NoFollowUpColumn" msprop:Generator_ColumnVarNameInTable="columnNoFollowUp" msprop:Generator_UserColumnName="NoFollowUp" type="xs:int" minOccurs="0" />
+              <xs:element name="NoFollowUp" msdata:ReadOnly="true" msprop:Generator_UserColumnName="NoFollowUp" msprop:Generator_ColumnPropNameInTable="NoFollowUpColumn" msprop:Generator_ColumnPropNameInRow="NoFollowUp" msprop:Generator_ColumnVarNameInTable="columnNoFollowUp" type="xs:int" minOccurs="0" />
               <xs:element name="InspectionWeb" msprop:Generator_ColumnPropNameInTable="InspectionWebColumn" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="InspectionWeb" msprop:Generator_UserColumnName="InspectionWeb" msprop:Generator_ColumnVarNameInTable="columnInspectionWeb" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -663,7 +664,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="webpagevisits" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="webpagevisits" msprop:Generator_ColumnPropNameInTable="webpagevisitsColumn" msprop:Generator_ColumnVarNameInTable="columnwebpagevisits" msprop:Generator_UserColumnName="webpagevisits" type="xs:int" minOccurs="0" />
+              <xs:element name="webpagevisits" msdata:ReadOnly="true" msprop:Generator_UserColumnName="webpagevisits" msprop:Generator_ColumnPropNameInTable="webpagevisitsColumn" msprop:Generator_ColumnPropNameInRow="webpagevisits" msprop:Generator_ColumnVarNameInTable="columnwebpagevisits" type="xs:int" minOccurs="0" />
               <xs:element name="leadtype" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="leadtypeColumn" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="leadtype" msprop:Generator_UserColumnName="leadtype" msprop:Generator_ColumnVarNameInTable="columnleadtype" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -769,7 +770,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="modifiedby" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="modifiedby" msprop:Generator_ColumnPropNameInTable="modifiedbyColumn" msprop:Generator_ColumnVarNameInTable="columnmodifiedby" msprop:Generator_UserColumnName="modifiedby" type="xs:int" minOccurs="0" />
+              <xs:element name="modifiedby" msdata:ReadOnly="true" msprop:Generator_UserColumnName="modifiedby" msprop:Generator_ColumnPropNameInTable="modifiedbyColumn" msprop:Generator_ColumnPropNameInRow="modifiedby" msprop:Generator_ColumnVarNameInTable="columnmodifiedby" type="xs:int" minOccurs="0" />
               <xs:element name="customurl" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="customurlColumn" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="customurl" msprop:Generator_UserColumnName="customurl" msprop:Generator_ColumnVarNameInTable="columncustomurl" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -777,15 +778,16 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="companylogourl" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInTable="companylogourlColumn" msprop:Generator_ColumnVarNameInTable="columncompanylogourl" msprop:Generator_UserColumnName="companylogourl" msprop:Generator_ColumnPropNameInRow="companylogourl" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="DealsJVPSelect" msprop:Generator_RowEvHandlerName="DealsJVPSelectRowChangeEventHandler" msprop:Generator_RowDeletedName="DealsJVPSelectRowDeleted" msprop:Generator_RowDeletingName="DealsJVPSelectRowDeleting" msprop:Generator_RowEvArgName="DealsJVPSelectRowChangeEvent" msprop:Generator_TablePropName="DealsJVPSelect" msprop:Generator_RowChangedName="DealsJVPSelectRowChanged" msprop:Generator_RowChangingName="DealsJVPSelectRowChanging" msprop:Generator_TableClassName="DealsJVPSelectDataTable" msprop:Generator_RowClassName="DealsJVPSelectRow" msprop:Generator_TableVarName="tableDealsJVPSelect" msprop:Generator_UserTableName="DealsJVPSelect">
+        <xs:element name="DealsJVPSelect" msprop:Generator_RowClassName="DealsJVPSelectRow" msprop:Generator_RowEvHandlerName="DealsJVPSelectRowChangeEventHandler" msprop:Generator_RowDeletedName="DealsJVPSelectRowDeleted" msprop:Generator_RowDeletingName="DealsJVPSelectRowDeleting" msprop:Generator_RowEvArgName="DealsJVPSelectRowChangeEvent" msprop:Generator_TablePropName="DealsJVPSelect" msprop:Generator_RowChangedName="DealsJVPSelectRowChanged" msprop:Generator_UserTableName="DealsJVPSelect" msprop:Generator_RowChangingName="DealsJVPSelectRowChanging" msprop:Generator_TableClassName="DealsJVPSelectDataTable" msprop:Generator_TableVarName="tableDealsJVPSelect">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_UserColumnName="id" type="xs:int" />
-              <xs:element name="dealid" msprop:Generator_ColumnPropNameInRow="dealid" msprop:Generator_ColumnPropNameInTable="dealidColumn" msprop:Generator_ColumnVarNameInTable="columndealid" msprop:Generator_UserColumnName="dealid" type="xs:int" />
-              <xs:element name="jvpper" msprop:Generator_ColumnPropNameInRow="jvpper" msprop:Generator_ColumnPropNameInTable="jvpperColumn" msprop:Generator_ColumnVarNameInTable="columnjvpper" msprop:Generator_UserColumnName="jvpper" type="xs:float" />
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnVarNameInTable="columnid" type="xs:int" />
+              <xs:element name="dealid" msprop:Generator_UserColumnName="dealid" msprop:Generator_ColumnPropNameInTable="dealidColumn" msprop:Generator_ColumnPropNameInRow="dealid" msprop:Generator_ColumnVarNameInTable="columndealid" type="xs:int" />
+              <xs:element name="jvpper" msprop:Generator_UserColumnName="jvpper" msprop:Generator_ColumnPropNameInTable="jvpperColumn" msprop:Generator_ColumnPropNameInRow="jvpper" msprop:Generator_ColumnVarNameInTable="columnjvpper" type="xs:float" />
               <xs:element name="cstno" msprop:Generator_ColumnPropNameInTable="cstnoColumn" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="cstno" msprop:Generator_UserColumnName="cstno" msprop:Generator_ColumnVarNameInTable="columncstno">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -803,10 +805,10 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="DealMachinesSelect_Mobile" msprop:Generator_RowEvHandlerName="DealMachinesSelect_MobileRowChangeEventHandler" msprop:Generator_RowDeletedName="DealMachinesSelect_MobileRowDeleted" msprop:Generator_RowDeletingName="DealMachinesSelect_MobileRowDeleting" msprop:Generator_RowEvArgName="DealMachinesSelect_MobileRowChangeEvent" msprop:Generator_TablePropName="DealMachinesSelect_Mobile" msprop:Generator_RowChangedName="DealMachinesSelect_MobileRowChanged" msprop:Generator_RowChangingName="DealMachinesSelect_MobileRowChanging" msprop:Generator_TableClassName="DealMachinesSelect_MobileDataTable" msprop:Generator_RowClassName="DealMachinesSelect_MobileRow" msprop:Generator_TableVarName="tableDealMachinesSelect_Mobile" msprop:Generator_UserTableName="DealMachinesSelect_Mobile">
+        <xs:element name="DealMachinesSelect_Mobile" msprop:Generator_RowClassName="DealMachinesSelect_MobileRow" msprop:Generator_RowEvHandlerName="DealMachinesSelect_MobileRowChangeEventHandler" msprop:Generator_RowDeletedName="DealMachinesSelect_MobileRowDeleted" msprop:Generator_RowDeletingName="DealMachinesSelect_MobileRowDeleting" msprop:Generator_RowEvArgName="DealMachinesSelect_MobileRowChangeEvent" msprop:Generator_TablePropName="DealMachinesSelect_Mobile" msprop:Generator_RowChangedName="DealMachinesSelect_MobileRowChanged" msprop:Generator_UserTableName="DealMachinesSelect_Mobile" msprop:Generator_RowChangingName="DealMachinesSelect_MobileRowChanging" msprop:Generator_TableClassName="DealMachinesSelect_MobileDataTable" msprop:Generator_TableVarName="tableDealMachinesSelect_Mobile">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnVarNameInTable="columnid" type="xs:int" />
               <xs:element name="dealid" msprop:Generator_ColumnPropNameInTable="dealidColumn" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="dealid" msprop:Generator_UserColumnName="dealid" msprop:Generator_ColumnVarNameInTable="columndealid">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -828,7 +830,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="machineno" msprop:Generator_ColumnPropNameInRow="machineno" msprop:Generator_ColumnPropNameInTable="machinenoColumn" msprop:Generator_ColumnVarNameInTable="columnmachineno" msprop:Generator_UserColumnName="machineno" type="xs:int" />
+              <xs:element name="machineno" msprop:Generator_UserColumnName="machineno" msprop:Generator_ColumnPropNameInTable="machinenoColumn" msprop:Generator_ColumnPropNameInRow="machineno" msprop:Generator_ColumnVarNameInTable="columnmachineno" type="xs:int" />
               <xs:element name="descript" msprop:Generator_ColumnPropNameInTable="descriptColumn" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="descript" msprop:Generator_UserColumnName="descript" msprop:Generator_ColumnVarNameInTable="columndescript" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -885,7 +887,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="retail" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="retail" msprop:Generator_ColumnPropNameInTable="retailColumn" msprop:Generator_ColumnVarNameInTable="columnretail" msprop:Generator_UserColumnName="retail" type="xs:float" minOccurs="0" />
+              <xs:element name="retail" msdata:ReadOnly="true" msprop:Generator_UserColumnName="retail" msprop:Generator_ColumnPropNameInTable="retailColumn" msprop:Generator_ColumnPropNameInRow="retail" msprop:Generator_ColumnVarNameInTable="columnretail" type="xs:float" minOccurs="0" />
               <xs:element name="machStatus" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="machStatusColumn" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="machStatus" msprop:Generator_UserColumnName="machStatus" msprop:Generator_ColumnVarNameInTable="columnmachStatus" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -893,7 +895,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="pifs" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="pifs" msprop:Generator_ColumnPropNameInTable="pifsColumn" msprop:Generator_ColumnVarNameInTable="columnpifs" msprop:Generator_UserColumnName="pifs" type="xs:int" minOccurs="0" />
+              <xs:element name="pifs" msdata:ReadOnly="true" msprop:Generator_UserColumnName="pifs" msprop:Generator_ColumnPropNameInTable="pifsColumn" msprop:Generator_ColumnPropNameInRow="pifs" msprop:Generator_ColumnVarNameInTable="columnpifs" type="xs:int" minOccurs="0" />
               <xs:element name="LOCATION" msprop:Generator_ColumnPropNameInTable="LOCATIONColumn" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="LOCATION" msprop:Generator_UserColumnName="LOCATION" msprop:Generator_ColumnVarNameInTable="columnLOCATION" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -936,7 +938,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="JVPPER" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="JVPPER" msprop:Generator_ColumnPropNameInTable="JVPPERColumn" msprop:Generator_ColumnVarNameInTable="columnJVPPER" msprop:Generator_UserColumnName="JVPPER" type="xs:int" minOccurs="0" />
+              <xs:element name="JVPPER" msdata:ReadOnly="true" msprop:Generator_UserColumnName="JVPPER" msprop:Generator_ColumnPropNameInTable="JVPPERColumn" msprop:Generator_ColumnPropNameInRow="JVPPER" msprop:Generator_ColumnVarNameInTable="columnJVPPER" type="xs:int" minOccurs="0" />
               <xs:element name="JVPINVNO" msprop:Generator_ColumnPropNameInTable="JVPINVNOColumn" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="JVPINVNO" msprop:Generator_UserColumnName="JVPINVNO" msprop:Generator_ColumnVarNameInTable="columnJVPINVNO" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -993,8 +995,8 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="featuredMachine" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="featuredMachine" msprop:Generator_ColumnPropNameInTable="featuredMachineColumn" msprop:Generator_ColumnVarNameInTable="columnfeaturedMachine" msprop:Generator_UserColumnName="featuredMachine" type="xs:int" minOccurs="0" />
-              <xs:element name="lot" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="lot" msprop:Generator_ColumnPropNameInTable="lotColumn" msprop:Generator_ColumnVarNameInTable="columnlot" msprop:Generator_UserColumnName="lot" type="xs:int" minOccurs="0" />
+              <xs:element name="featuredMachine" msdata:ReadOnly="true" msprop:Generator_UserColumnName="featuredMachine" msprop:Generator_ColumnPropNameInTable="featuredMachineColumn" msprop:Generator_ColumnPropNameInRow="featuredMachine" msprop:Generator_ColumnVarNameInTable="columnfeaturedMachine" type="xs:int" minOccurs="0" />
+              <xs:element name="lot" msdata:ReadOnly="true" msprop:Generator_UserColumnName="lot" msprop:Generator_ColumnPropNameInTable="lotColumn" msprop:Generator_ColumnPropNameInRow="lot" msprop:Generator_ColumnVarNameInTable="columnlot" type="xs:int" minOccurs="0" />
               <xs:element name="lotext" msprop:Generator_ColumnPropNameInTable="lotextColumn" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="lotext" msprop:Generator_UserColumnName="lotext" msprop:Generator_ColumnVarNameInTable="columnlotext" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -1009,12 +1011,12 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="reserve" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="reserve" msprop:Generator_ColumnPropNameInTable="reserveColumn" msprop:Generator_ColumnVarNameInTable="columnreserve" msprop:Generator_UserColumnName="reserve" type="xs:decimal" minOccurs="0" />
-              <xs:element name="startingbid" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="startingbid" msprop:Generator_ColumnPropNameInTable="startingbidColumn" msprop:Generator_ColumnVarNameInTable="columnstartingbid" msprop:Generator_UserColumnName="startingbid" type="xs:decimal" minOccurs="0" />
-              <xs:element name="auctionStart" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="auctionStart" msprop:Generator_ColumnPropNameInTable="auctionStartColumn" msprop:Generator_ColumnVarNameInTable="columnauctionStart" msprop:Generator_UserColumnName="auctionStart" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="auctionEnd" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="auctionEnd" msprop:Generator_ColumnPropNameInTable="auctionEndColumn" msprop:Generator_ColumnVarNameInTable="columnauctionEnd" msprop:Generator_UserColumnName="auctionEnd" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="buynowprice" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="buynowprice" msprop:Generator_ColumnPropNameInTable="buynowpriceColumn" msprop:Generator_ColumnVarNameInTable="columnbuynowprice" msprop:Generator_UserColumnName="buynowprice" type="xs:decimal" minOccurs="0" />
-              <xs:element name="displayorderint" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="displayorderint" msprop:Generator_ColumnPropNameInTable="displayorderintColumn" msprop:Generator_ColumnVarNameInTable="columndisplayorderint" msprop:Generator_UserColumnName="displayorderint" type="xs:int" minOccurs="0" />
+              <xs:element name="reserve" msdata:ReadOnly="true" msprop:Generator_UserColumnName="reserve" msprop:Generator_ColumnPropNameInTable="reserveColumn" msprop:Generator_ColumnPropNameInRow="reserve" msprop:Generator_ColumnVarNameInTable="columnreserve" type="xs:decimal" minOccurs="0" />
+              <xs:element name="startingbid" msdata:ReadOnly="true" msprop:Generator_UserColumnName="startingbid" msprop:Generator_ColumnPropNameInTable="startingbidColumn" msprop:Generator_ColumnPropNameInRow="startingbid" msprop:Generator_ColumnVarNameInTable="columnstartingbid" type="xs:decimal" minOccurs="0" />
+              <xs:element name="auctionStart" msdata:ReadOnly="true" msprop:Generator_UserColumnName="auctionStart" msprop:Generator_ColumnPropNameInTable="auctionStartColumn" msprop:Generator_ColumnPropNameInRow="auctionStart" msprop:Generator_ColumnVarNameInTable="columnauctionStart" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="auctionEnd" msdata:ReadOnly="true" msprop:Generator_UserColumnName="auctionEnd" msprop:Generator_ColumnPropNameInTable="auctionEndColumn" msprop:Generator_ColumnPropNameInRow="auctionEnd" msprop:Generator_ColumnVarNameInTable="columnauctionEnd" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="buynowprice" msdata:ReadOnly="true" msprop:Generator_UserColumnName="buynowprice" msprop:Generator_ColumnPropNameInTable="buynowpriceColumn" msprop:Generator_ColumnPropNameInRow="buynowprice" msprop:Generator_ColumnVarNameInTable="columnbuynowprice" type="xs:decimal" minOccurs="0" />
+              <xs:element name="displayorderint" msdata:ReadOnly="true" msprop:Generator_UserColumnName="displayorderint" msprop:Generator_ColumnPropNameInTable="displayorderintColumn" msprop:Generator_ColumnPropNameInRow="displayorderint" msprop:Generator_ColumnVarNameInTable="columndisplayorderint" type="xs:int" minOccurs="0" />
               <xs:element name="Catno2" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="Catno2Column" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="Catno2" msprop:Generator_UserColumnName="Catno2" msprop:Generator_ColumnVarNameInTable="columnCatno2" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -1025,11 +1027,11 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="DealLotCatalogSelect_Mobile" msprop:Generator_RowClassName="DealLotCatalogSelect_MobileRow" msprop:Generator_RowEvHandlerName="DealLotCatalogSelect_MobileRowChangeEventHandler" msprop:Generator_RowDeletedName="DealLotCatalogSelect_MobileRowDeleted" msprop:Generator_RowDeletingName="DealLotCatalogSelect_MobileRowDeleting" msprop:Generator_RowEvArgName="DealLotCatalogSelect_MobileRowChangeEvent" msprop:Generator_TablePropName="DealLotCatalogSelect_Mobile" msprop:Generator_RowChangedName="DealLotCatalogSelect_MobileRowChanged" msprop:Generator_RowChangingName="DealLotCatalogSelect_MobileRowChanging" msprop:Generator_TableClassName="DealLotCatalogSelect_MobileDataTable" msprop:Generator_UserTableName="DealLotCatalogSelect_Mobile" msprop:Generator_TableVarName="tableDealLotCatalogSelect_Mobile">
+        <xs:element name="DealLotCatalogSelect_Mobile" msprop:Generator_RowEvHandlerName="DealLotCatalogSelect_MobileRowChangeEventHandler" msprop:Generator_RowDeletedName="DealLotCatalogSelect_MobileRowDeleted" msprop:Generator_RowDeletingName="DealLotCatalogSelect_MobileRowDeleting" msprop:Generator_RowEvArgName="DealLotCatalogSelect_MobileRowChangeEvent" msprop:Generator_TablePropName="DealLotCatalogSelect_Mobile" msprop:Generator_RowChangedName="DealLotCatalogSelect_MobileRowChanged" msprop:Generator_UserTableName="DealLotCatalogSelect_Mobile" msprop:Generator_RowChangingName="DealLotCatalogSelect_MobileRowChanging" msprop:Generator_RowClassName="DealLotCatalogSelect_MobileRow" msprop:Generator_TableClassName="DealLotCatalogSelect_MobileDataTable" msprop:Generator_TableVarName="tableDealLotCatalogSelect_Mobile">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_UserColumnName="id" type="xs:int" />
-              <xs:element name="dealid" msprop:Generator_ColumnPropNameInRow="dealid" msprop:Generator_ColumnPropNameInTable="dealidColumn" msprop:Generator_ColumnVarNameInTable="columndealid" msprop:Generator_UserColumnName="dealid" type="xs:int" minOccurs="0" />
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnVarNameInTable="columnid" type="xs:int" />
+              <xs:element name="dealid" msprop:Generator_UserColumnName="dealid" msprop:Generator_ColumnPropNameInTable="dealidColumn" msprop:Generator_ColumnPropNameInRow="dealid" msprop:Generator_ColumnVarNameInTable="columndealid" type="xs:int" minOccurs="0" />
               <xs:element name="lot" msprop:Generator_ColumnPropNameInTable="lotColumn" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="lot" msprop:Generator_UserColumnName="lot" msprop:Generator_ColumnVarNameInTable="columnlot" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -1037,7 +1039,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="sortorder" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="sortorder" msprop:Generator_ColumnPropNameInTable="sortorderColumn" msprop:Generator_ColumnVarNameInTable="columnsortorder" msprop:Generator_UserColumnName="sortorder" type="xs:int" minOccurs="0" />
+              <xs:element name="sortorder" msdata:ReadOnly="true" msprop:Generator_UserColumnName="sortorder" msprop:Generator_ColumnPropNameInTable="sortorderColumn" msprop:Generator_ColumnPropNameInRow="sortorder" msprop:Generator_ColumnVarNameInTable="columnsortorder" type="xs:int" minOccurs="0" />
               <xs:element name="description" msprop:Generator_ColumnPropNameInTable="descriptionColumn" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="description" msprop:Generator_UserColumnName="description" msprop:Generator_ColumnVarNameInTable="columndescription" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -1045,7 +1047,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="buyItNowPrice" msprop:Generator_ColumnPropNameInRow="buyItNowPrice" msprop:Generator_ColumnPropNameInTable="buyItNowPriceColumn" msprop:Generator_ColumnVarNameInTable="columnbuyItNowPrice" msprop:Generator_UserColumnName="buyItNowPrice" type="xs:decimal" minOccurs="0" />
+              <xs:element name="buyItNowPrice" msprop:Generator_UserColumnName="buyItNowPrice" msprop:Generator_ColumnPropNameInTable="buyItNowPriceColumn" msprop:Generator_ColumnPropNameInRow="buyItNowPrice" msprop:Generator_ColumnVarNameInTable="columnbuyItNowPrice" type="xs:decimal" minOccurs="0" />
               <xs:element name="ContextualURL" msprop:Generator_ColumnPropNameInTable="ContextualURLColumn" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="ContextualURL" msprop:Generator_UserColumnName="ContextualURL" msprop:Generator_ColumnVarNameInTable="columnContextualURL" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -1053,8 +1055,8 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Sold" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="Sold" msprop:Generator_ColumnPropNameInTable="SoldColumn" msprop:Generator_ColumnVarNameInTable="columnSold" msprop:Generator_UserColumnName="Sold" type="xs:boolean" minOccurs="0" />
-              <xs:element name="dateadded" msprop:Generator_ColumnPropNameInRow="dateadded" msprop:Generator_ColumnPropNameInTable="dateaddedColumn" msprop:Generator_ColumnVarNameInTable="columndateadded" msprop:Generator_UserColumnName="dateadded" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Sold" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Sold" msprop:Generator_ColumnPropNameInTable="SoldColumn" msprop:Generator_ColumnPropNameInRow="Sold" msprop:Generator_ColumnVarNameInTable="columnSold" type="xs:boolean" minOccurs="0" />
+              <xs:element name="dateadded" msprop:Generator_UserColumnName="dateadded" msprop:Generator_ColumnPropNameInTable="dateaddedColumn" msprop:Generator_ColumnPropNameInRow="dateadded" msprop:Generator_ColumnVarNameInTable="columndateadded" type="xs:dateTime" minOccurs="0" />
               <xs:element name="dateUpdated" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="dateUpdatedColumn" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="dateUpdated" msprop:Generator_UserColumnName="dateUpdated" msprop:Generator_ColumnVarNameInTable="columndateUpdated" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">

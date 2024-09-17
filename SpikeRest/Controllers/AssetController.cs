@@ -16,6 +16,9 @@ namespace SpikeRest.Controllers
     public class AssetController : ApiController
     {
         private List<asset> assetList;
+
+        private string idOfInsert = "0";
+
         // GET: api/Asset
         public List<asset> Get()
         {
@@ -30,7 +33,8 @@ namespace SpikeRest.Controllers
         }
 
         // GET: api/Asset/5
-        public List<asset> Get(string action, string an, string desc, string un )
+        public List<asset> Get(string action, string an, string desc, string un,
+            string mfg, string md, string yr)
         {
             ConnectionStringSettingsCollection connectionStrings = ConfigurationManager.ConnectionStrings;
             string pglConnection = "";
@@ -59,16 +63,35 @@ namespace SpikeRest.Controllers
                 cmd.Parameters.Add(new SqlParameter("@assetNumber", an));
                 cmd.Parameters.Add(new SqlParameter("@descript", desc));
                 cmd.Parameters.Add(new SqlParameter("@username", un));
+                cmd.Parameters.Add(new SqlParameter("@mfg", mfg));
+                cmd.Parameters.Add(new SqlParameter("@model", md));
+                cmd.Parameters.Add(new SqlParameter("@year", yr));
 
-                result = cmd.ExecuteScalar().ToString();
+                SqlParameter output1 = new SqlParameter("@resultValue", SqlDbType.VarChar);
+                output1.Direction = ParameterDirection.Output;
+                output1.Size = 100;
+                cmd.Parameters.Add(output1);
 
-                if (result == "1")
+                int nrows = Convert.ToInt32(cmd.ExecuteNonQuery());
+                result = output1.Value.ToString();
+
+                //result = cmd.ExecuteScalar().ToString();
+
+                if (result == "0")
                 {
+                    result = "fail";
+                }
+                else
+                {
+                    idOfInsert = result;
                     result = "true";
                 }
+
                 cmd.Dispose();
                 cn.Close();
                 cn.Dispose();
+
+                
             }
             catch
             {
@@ -81,6 +104,7 @@ namespace SpikeRest.Controllers
             i.Username = un;
             i.AssetNumber = result;
             i.Descript = "";
+            i.Id = idOfInsert;   // id from identity column id on databse table SamAddedAssets
             assetList.Add(i);
 
             return assetList;

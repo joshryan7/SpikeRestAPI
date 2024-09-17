@@ -348,6 +348,7 @@
               <Mapping SourceColumn="Sqft" DataSetColumn="sqft" />
               <Mapping SourceColumn="reserved" DataSetColumn="reserved" />
               <Mapping SourceColumn="bookvalue" DataSetColumn="bookvalue" />
+              <Mapping SourceColumn="location" DataSetColumn="LCODE" />
             </Mappings>
             <Sources>
               <DbSource ConnectionRef="CRMConnectionString (Web.config)" DbObjectName="CRM.dbo.GetUsedInventorySearch_Mobile" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="FillSearch" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataSearch" GeneratorSourceName="FillSearch" GetMethodModifier="Public" GetMethodName="GetDataSearch" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataSearch" UserSourceName="FillSearch">
@@ -1652,8 +1653,9 @@
               <xs:element name="signorid" msprop:Generator_ColumnPropNameInTable="signoridColumn" msprop:Generator_ColumnPropNameInRow="signorid" msprop:Generator_UserColumnName="signorid" msprop:Generator_ColumnVarNameInTable="columnsignorid" type="xs:int" minOccurs="0" />
               <xs:element name="euros" msprop:Generator_ColumnPropNameInTable="eurosColumn" msprop:Generator_ColumnPropNameInRow="euros" msprop:Generator_UserColumnName="euros" msprop:Generator_ColumnVarNameInTable="columneuros" type="xs:boolean" default="false" minOccurs="0" />
               <xs:element name="responsibleSalesmanId" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="responsibleSalesmanIdColumn" msprop:Generator_ColumnPropNameInRow="responsibleSalesmanId" msprop:Generator_UserColumnName="responsibleSalesmanId" msprop:Generator_ColumnVarNameInTable="columnresponsibleSalesmanId" type="xs:int" minOccurs="0" />
-              <xs:element name="reserved" msprop:Generator_ColumnPropNameInRow="reserved" msprop:Generator_ColumnPropNameInTable="reservedColumn" msprop:Generator_ColumnVarNameInTable="columnreserved" msprop:Generator_UserColumnName="reserved" type="xs:boolean" minOccurs="0" />
-              <xs:element name="bookvalue" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInTable="bookvalueColumn" msprop:Generator_ColumnVarNameInTable="columnbookvalue" msprop:Generator_UserColumnName="bookvalue" msprop:Generator_ColumnPropNameInRow="bookvalue" type="xs:string" minOccurs="0" />
+              <xs:element name="reserved" msprop:Generator_UserColumnName="reserved" msprop:Generator_ColumnPropNameInTable="reservedColumn" msprop:Generator_ColumnPropNameInRow="reserved" msprop:Generator_ColumnVarNameInTable="columnreserved" type="xs:boolean" minOccurs="0" />
+              <xs:element name="bookvalue" msprop:Generator_ColumnPropNameInTable="bookvalueColumn" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="bookvalue" msprop:Generator_UserColumnName="bookvalue" msprop:Generator_ColumnVarNameInTable="columnbookvalue" type="xs:string" minOccurs="0" />
+              <xs:element name="LCODE" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInTable="LCODEColumn" msprop:Generator_ColumnVarNameInTable="columnLCODE" msprop:Generator_UserColumnName="LCODE" msprop:Generator_ColumnPropNameInRow="LCODE" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

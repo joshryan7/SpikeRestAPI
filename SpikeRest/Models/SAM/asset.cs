@@ -20,5 +20,8 @@ namespace SpikeRest.Models.SAM
 
         [DataMember(Name = "username")]
         public string Username { get; set; }
+
+        [DataMember(Name = "id")]
+        public string Id { get; set; }
     }
 }
